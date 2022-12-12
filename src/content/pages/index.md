@@ -69,11 +69,11 @@ coverletter:
   coverLink: ""
 portfolio:
   openText: ""
-  closeText: "With great power, comes great responsibility"
+  closeText: ""
 address:
-  addressText: Any Town, USA
+  addressText: Gulfport, MS
 address2:
-  addressText2: (888) 555-1212
+  addressText2: ""
 svgImage: /assets/transparent.png
 title: Business Management & Marketing
 shareable: ""

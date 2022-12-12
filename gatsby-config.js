@@ -187,8 +187,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://myresume-ex1.netlify.app',
-        sitemap: 'https://myresume-ex1.netlify.app/sitemap.xml',
+        host: 'https://deighleen.com',
+        sitemap: 'https://deighleen.com/sitemap.xml',
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
           development: {
