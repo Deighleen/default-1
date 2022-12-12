@@ -71,7 +71,7 @@ address2:
   addressText2: ""
 youtubestart: "1"
 ---
-Deighleem has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience.
+Deighleen has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience.
 
 I have served various positions of increasing responsibility.
 
