@@ -1,48 +1,58 @@
 ---
 slug: /
-tagline: short sentence description
+tagline: Energetic, forward-thinking and loyally dedicated
 featuredImage: /assets/default-og-image.jpg
-secondaryImage: /assets/default-user.webp
+secondaryImage: /assets/deighleen.webp
 showFeature: false
 showInfo: "1"
-showPosts: "1"
-showResume: "1"
+showPosts: false
+showResume: true
 showSocial: true
 resume:
-  highlightsText: <p><strong>Social Media Marketing - specialized experience leading PPC and SEO marketing strategies.</strong></p><p>An MBA with 5 years of experience developing and managing marketing campaigns and specialized working knowledge of Google Analytics and AdWords, seeks the role of Social Media Marketing Manager with XYZ Inc. to implement successful digital marketing campaigns and provide exceptional thought leadership.</p><p>Three years of specialized experience leading PPC and SEO marketing strategies
-    Managed social media accounts for four businesses with yearly sales over $500,000
-    Certified Digital Marketer 2016, Udacity
-    Received Employee of the Year Award at ABC Company 2018 and 2019</p>
+  highlightsText: <p><strong>Social Media Marketing - specialized experience leading PPC and SEO marketing strategies.</strong></p><p>
+    19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience.
+    I have served various positions of increasing responsibility.
+    I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.</p>
   highlightsTitle: Highlights
   profTitle: Proficiency
   profText: <ul>
-      <li>Implement paid search media plans and effectively build strong relationships with internal and external (vendor) teams</li>
-      <li>Outstanding verbal and written skills in English and German or Spanish or French</li>
-      <li>Proven experience driving SEM strategy and execution</li>
-      <li>Experience with common Adobe Analytics (Site Catalyst), Tableau, Adobe Experience Cloud and marketing data warehouse platforms</li>
-      <li>Looking for a thrilling entrepreneurial experience and willing to learn in a fast-moving environment</li>
-      <li>Closing collaboration with other marketing channel managers for smooth 360 experiences</li>
+    <li>Reputable background and foundation built b2b & b2c sales background.</li>
+    </li>trong ability to work under pressure and in a fast-paced environment.</li>
+    <li>Marketing Experience in local and national markets.</li>
+    <li>Previous member of Biloxi, Bay, Orange Grove, & Gulfport Chambers. Civic Leader 2005.</li>
+    <li>Computer Knowledge- Outlook, Word, Excel, Power Point,WorkFlow1, IQ Matrix, Sta!Works, ADP, and M.A.X. (Payroll & Scheduling).</li>
+    <li>Budgets and Key Performance Indicators</li>
       </ul>
   eduTitle: Education
-  eduText: <ul className="edu"><li><strong>University of Michigan</strong><br />Business -
-    Degree</li><li><strong>Community College</strong><br />Quality
-    Assurance - Degree</li><li><strong>High
-    School</strong><br />High School General Courses - Diploma</li></ul>
+  eduText: <ul className="edu">
+    <li>Graduated Hillsboro High School, Hillsboro, OR.</li>
+    <li>Business Management Courses</li>
+    <li>Oregon Community College, Portland, OR.</li>
+    <li>STEP FORWARD Management Classes</li>
+    </ul>
   exTitle: Experience
-  exText: <p><strong>ABC Company, Nashville, TN, 2017-2020</strong><br
-    /><em>Social Media Marketing Associate</em></p><p>Built a 15k Facebook following and 20k Instagram following for new startup, increasing leads by 160%
-    Developed compelling CTAs for website and social media copy, producing a 60% increase in sales<p>
-    <p>Formulated Instagram strategy and collaborated with influencers in our market to promote top-selling products, resulting in $200,000 net sales in three months</p><br
+  exText: <p><strong>Dollar General | 2018 - 2021</strong><br
+    /><em>Store Manager</em></p><p>Equipped with extensive experience in retail management and sales. Employs excellent leadership skills and multi-tasking strengths. Well versed in all aspects of running a high-end store, including opening and closing procedures, banking, merchandising and recruiting.
+    <p>
+    <p>Responsibilities included customer service, hiring and training of sta!, opening/closing of store, cash and shrink management, P&L management, sales growth, vendor relations, ad sets, planner sets, and POG sets.</p><br
     />
-    <p><strong>123 Company, Austin, TX, 2014-2017</strong><br
-    /><em>Website Manager</em></p>
-    <p>Team leader for the design and development of new mobile application</p>
-    <p>Conducted A/B testing on paid Facebook and Instagram campaigns, resulting in a boost in conversion from 70% to 90%.</p>
-    <p>Implemented innovative SEO strategy to increase organic website traffic 200% in five months</p>
 
-    <p><strong>Anonymous Corporation, Los Angeles, TN, 2015-2017</strong><br
-    /><em>Social Media Intern</em></p>
-    <p>Experience in search engine marketing, Experience with bid monitoring and adjustment of search media campaigns across multiple sites</p>
+    <p><strong>Winn Dixie | 2016 - 2018</strong><br
+    /><em>Floral Manager</em></p>
+    <p>Current responsibilities include daily creation of both attractive and profitable arrangements.
+    Support given to General Manager with strong communication skills and strategic product merchandising.</p>
+    <p>Currently trained in department inventory audits and shrink control using T.P.R methods.
+    Other daily tasks include pricing accuracy, web and vendor ordering and knowledge of produce department procedures and expectations.</p>
+
+    <p><strong>Clarks Bostonian Shoes | 2010 - 2016</strong><br
+    /><em>Store Manager</em></p>
+    <p>Duties include overseeing day to day store operations that include, hiring, and coaching, analyzing sales, setting store goals, and achieving sales budgets.</p>
+    <p>Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads. Ensure that all daily, weekly, and monthly store reports are met at deadline.</p>
+
+    <p><strong>Nextel Partners, 1999 - 2010</strong><br
+    /><em>Area General Manager</em></p>
+    <p>Responsible for all daily operations of 9 high volume retail locations & B2B Sales Team. Trained retail associates and business sales consultants. </p>
+    <p>Developed new business and customer prospects. Achieved and surpassed sales goals with Retail locations and with B2B customers for 6 consecutive years. Developed high standards of public relations and networking strategies to acquire new and retain existing accounts.</p>
     
 underlayImage: 
 youtuber: https://youtu.be/WgXN0kO1JEA
@@ -65,7 +75,7 @@ address:
 address2:
   addressText2: (888) 555-1212
 svgImage: /assets/transparent.png
-title: My Name Resume
+title: Business Management & Marketing
 shareable: ""
 template: index-page
 description: MyResume - Next-Gen Resume Platform
@@ -73,7 +83,11 @@ svgzindex: ""
 
 
 ---
-A resume introduction shortens the most important aspects of your experience into a concise pitch to the hiring manager. So, write the other parts of your resume first. Then, decide which points from each part to include in your resume’s introduction paragraph, here.
+Deighleem has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience.
+
+I have served various positions of increasing responsibility.
+
+I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
 
 <!-- <blockquote style=" text-align: left; border-radius: 12px;font-size: clamp(1.5rem, 1.4vw, 2.8rem); "><div style="padding: 2rem 10% 0px;">A plain text resume, also known as an ASCII resume, is a resume written in a plain text file format (.txt). This means it has no special formatting like colors, special lines or multiple columns.</div><div class="logofirst" style="text-align: right; margin: 2rem 30% 0px 0px; filter: none;"></div></blockquote> -->
 
