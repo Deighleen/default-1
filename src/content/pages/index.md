@@ -9,7 +9,7 @@ showPosts: false
 showResume: true
 showSocial: true
 resume:
-  highlightsText: <p><strong>Social Media Marketing - specialized experience leading PPC and SEO marketing strategies.</strong></p><p>
+  highlightsText: <p><strong>Business Management, Marketing and Sales</strong></p><p>
     19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience.
     I have served various positions of increasing responsibility.
     I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.</p>
