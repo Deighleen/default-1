@@ -159,6 +159,7 @@ collections:
           - label: "Resume"
             name: "resume"
             widget: "object"
+
             fields:
               - name: "highlightsTitle"
                 label: "Highlights/Summary Title"
@@ -274,7 +275,7 @@ collections:
                 name: title
                 label: Site Title
                 required: true
-              - widget: string
+              - widget: hidden
                 name: titleTemplate
                 label: Title Template (ignore)
                 default: "%s"
