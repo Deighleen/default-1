@@ -36,37 +36,59 @@ resume:
 
     * Budgets and Key Performance Indicators
   eduTitle: Education
-  eduText: <ul className="edu"> <li>Graduated Hillsboro High School, Hillsboro,
-    OR.</li> <li>Business Management Courses</li> <li>Oregon Community College,
-    Portland, OR.</li> <li>STEP FORWARD Management Classes</li> </ul>
+  eduText: |-
+    
+
+    * Graduated Hillsboro High School, Hillsboro, OR.
+    * Business Management Courses
+    * Oregon Community College, Portland, OR.
+    * STEP FORWARD Management Classes
   exTitle: Experience
   exText: >-
-    <p><strong>Dollar General | 2018 - 2021</strong><br /><em>Store
+    **Dollar General | 2018 - 2021**\
+
+    *Store Manager*
 
 
-    Manager</em></p><p>Equipped with extensive experience in retail management
-
-    and sales. Employs excellent leadership skills and multi-tasking strengths.
-
-    Well versed in all aspects of running a high-end store, including opening
-
-    and closing procedures, banking, merchandising and recruiting. <p>
+    Equipped with extensive experience in retail management and sales. Employs excellent leadership skills and multi-tasking strengths. Well versed in all aspects of running a high-end store, including opening and closing procedures, banking, merchandising and recruiting. 
 
 
-    <p>Responsibilities included customer service, hiring and training of sta!,
-
-    opening/closing of store, cash and shrink management, P&L management, sales
-
-    growth, vendor relations, ad sets, planner sets, and POG sets.</p><br />
+    Responsibilities included customer service, hiring and training of sta!, opening/closing of store, cash and shrink management, P&L management, sales growth, vendor relations, ad sets, planner sets, and POG sets.
 
 
-    <p><strong>Winn Dixie | 2016 - 2018</strong><br /><em>Floral Manager</em></p> <p>Current responsibilities include daily creation of both attractive and profitable arrangements. Support given to General Manager with strong communication skills and strategic product merchandising.</p> <p>Currently trained in department inventory audits and shrink control using T.P.R methods. Other daily tasks include pricing accuracy, web and vendor ordering and knowledge of produce department procedures and expectations.</p>
+    \
+
+    **Winn Dixie | 2016 - 2018**\
+
+    *Floral Manager*
 
 
-    <p><strong>Clarks Bostonian Shoes | 2010 - 2016</strong><br /><em>Store Manager</em></p> <p>Duties include overseeing day to day store operations that include, hiring, and coaching, analyzing sales, setting store goals, and achieving sales budgets.</p> <p>Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads. Ensure that all daily, weekly, and monthly store reports are met at deadline.</p>
+    Current responsibilities include daily creation of both attractive and profitable arrangements. Support given to General Manager with strong communication skills and strategic product merchandising.
 
 
-    <p><strong>Nextel Partners, 1999 - 2010</strong><br /><em>Area General Manager</em></p> <p>Responsible for all daily operations of 9 high volume retail locations & B2B Sales Team. Trained retail associates and business sales consultants. </p> <p>Developed new business and customer prospects. Achieved and surpassed sales goals with Retail locations and with B2B customers for 6 consecutive years.</p>
+    Currently trained in department inventory audits and shrink control using T.P.R methods. Other daily tasks include pricing accuracy, web and vendor ordering and knowledge of produce department procedures and expectations.
+
+
+    **Clarks Bostonian Shoes | 2010 - 2016**\
+
+    *Store Manager*
+
+
+    Duties include overseeing day to day store operations that include, hiring, and coaching, analyzing sales, setting store goals, and achieving sales budgets.
+
+
+    Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads. Ensure that all daily, weekly, and monthly store reports are met at deadline.
+
+
+    **Nextel Partners, 1999 - 2010**\
+
+    *Area General Manager*
+
+
+    Responsible for all daily operations of 9 high volume retail locations & B2B Sales Team. Trained retail associates and business sales consultants. 
+
+
+    Developed new business and customer prospects. Achieved and surpassed sales goals with Retail locations and with B2B customers for 6 consecutive years.
 youtubeautostart: "1"
 cta:
   ctaText: Contact Me
