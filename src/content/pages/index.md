@@ -45,8 +45,7 @@ resume:
     <p><strong>Clarks Bostonian Shoes | 2010 - 2016</strong><br /><em>Store Manager</em></p> <p>Duties include overseeing day to day store operations that include, hiring, and coaching, analyzing sales, setting store goals, and achieving sales budgets.</p> <p>Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads. Ensure that all daily, weekly, and monthly store reports are met at deadline.</p>
 
     <p><strong>Nextel Partners, 1999 - 2010</strong><br /><em>Area General Manager</em></p> <p>Responsible for all daily operations of 9 high volume retail locations & B2B Sales Team. Trained retail associates and business sales consultants. </p> <p>Developed new business and customer prospects. Achieved and surpassed sales goals with Retail locations and with B2B customers for 6 consecutive years. Developed high standards of public relations and networking strategies to acquire new and retain existing accounts.</p>
-UnderlayImage: /assets/Experiences-Header-5.jpg
-underlayImage: /assets/Experiences-Header-5.jpg
+underlayImage: null
 youtuber: ""
 youtubeautostart: "1"
 showPosts: false
