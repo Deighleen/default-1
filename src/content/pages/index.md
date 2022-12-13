@@ -21,13 +21,20 @@ resume:
     19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
   highlightsTitle: Highlights
   profTitle: Proficiency
-  profText: <ul> <li>Reputable background and foundation built b2b & b2c sales
-    background.</li> <li>Strong ability to work under pressure and in a
-    fast-paced environment.</li> <li>Marketing Experience in local and national
-    markets.</li> <li>Previous member of Biloxi, Bay, Orange Grove, & Gulfport
-    Chambers. Civic Leader 2005.</li> <li>Computer Knowledge- Outlook, Word,
-    Excel, Power Point,WorkFlow1, IQ Matrix, Sta!Works, ADP, and M.A.X. (Payroll
-    & Scheduling).</li> <li>Budgets and Key Performance Indicators</li> </ul>
+  profText: >-
+    
+
+    * Reputable background and foundation built b2b & b2c sales background.
+
+    * Strong ability to work under pressure and in a fast-paced environment.
+
+    * Marketing Experience in local and national markets.
+
+    * Previous member of Biloxi, Bay, Orange Grove, & Gulfport Chambers. Civic Leader 2005.
+
+    * Computer Knowledge- Outlook, Word, Excel, Power Point,WorkFlow1, IQ Matrix, Sta!Works, ADP, and M.A.X. (Payroll & Scheduling).
+
+    * Budgets and Key Performance Indicators
   eduTitle: Education
   eduText: <ul className="edu"> <li>Graduated Hillsboro High School, Hillsboro,
     OR.</li> <li>Business Management Courses</li> <li>Oregon Community College,
