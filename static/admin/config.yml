@@ -110,14 +110,12 @@ collections:
           - { label: "Tagline", name: "tagline", widget: "string" }
           - { label: "Featured Image", name: "featuredImage", widget: "image" }
           - { label: "Profile/Avatar", name: "secondaryImage", widget: "image", hint: "This is your profile picture or avatar", required: false }
-          - { label: "Profile/Avatar", name: "underlayImage", widget: "image", hint: "This is a background image behind your profile section", required: false }
           - { label: "Show Feature", name: "showFeature", widget: "boolean" }
           - { label: "Show Info", name: "showInfo", widget: "boolean" }
           - { label: "Show Posts", name: "showPosts", widget: "boolean" }
           - { label: "Show Social Links", name: "showSocial", widget: "boolean", default: "true", required: false }
           - { label: "YouTube Url", name: "youtuber", widget: "string",required: false }
           - { label: "Body", name: "body", widget: "markdown" }
-          
           - label: "Contact Button"
             name: "cta"
             widget: "object"
