@@ -19,7 +19,7 @@ resume:
   highlightsTitle: Highlights
   profTitle: Proficiency
   profText: <ul> <li>Reputable background and foundation built b2b & b2c sales
-    background.</li> </li>trong ability to work under pressure and in a
+    background.</li> <li>Strong ability to work under pressure and in a
     fast-paced environment.</li> <li>Marketing Experience in local and national
     markets.</li> <li>Previous member of Biloxi, Bay, Orange Grove, & Gulfport
     Chambers. Civic Leader 2005.</li> <li>Computer Knowledge- Outlook, Word,
@@ -44,7 +44,7 @@ resume:
 
     <p><strong>Clarks Bostonian Shoes | 2010 - 2016</strong><br /><em>Store Manager</em></p> <p>Duties include overseeing day to day store operations that include, hiring, and coaching, analyzing sales, setting store goals, and achieving sales budgets.</p> <p>Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads. Ensure that all daily, weekly, and monthly store reports are met at deadline.</p>
 
-    <p><strong>Nextel Partners, 1999 - 2010</strong><br /><em>Area General Manager</em></p> <p>Responsible for all daily operations of 9 high volume retail locations & B2B Sales Team. Trained retail associates and business sales consultants. </p> <p>Developed new business and customer prospects. Achieved and surpassed sales goals with Retail locations and with B2B customers for 6 consecutive years. Developed high standards of public relations and networking strategies to acquire new and retain existing accounts.</p>
+    <p><strong>Nextel Partners, 1999 - 2010</strong><br /><em>Area General Manager</em></p> <p>Responsible for all daily operations of 9 high volume retail locations & B2B Sales Team. Trained retail associates and business sales consultants. </p> <p>Developed new business and customer prospects. Achieved and surpassed sales goals with Retail locations and with B2B customers for 6 consecutive years.</p>
 
 underlayImage: ""
 youtuber: ""

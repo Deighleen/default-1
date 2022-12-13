@@ -1950,6 +1950,7 @@ border:1px solid #222;
 
     #resume ul li{
       margin-left:1rem;
+      margin-bottom:.5rem;
     }
 
     /* .pagination a{  text-shadow: 1px 2px 1px black;} */
@@ -2985,6 +2986,8 @@ opacity:.8;
    #resume{overflow: wrap !important;}
    #resumename{display:block !important;}
     
+   .flexcheek {width:50%; position:relative !important; top:0;}
+
  h3{text-align: left !important; font-size:20px !important;}
 
     .footerstyle, .sidebarIconToggle, .back, .taggage, .infomenu, .sidebart, #posts, #feature, .print, #consent, .commentbox, .avatar-frame, .makeStyles-container-1, .usability {display: none !important;}

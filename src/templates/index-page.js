@@ -657,7 +657,7 @@ const YouTube = frontmatter.youtuber
 {ShowResume ? (
 
 
-<section id="resume" name="resume" style={{ display:'', height:'', overflow:'',position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}}>
+<section id="resume" name="resume" style={{ display:'', height:'', overflow:'', margin:'1rem', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}}>
 
 <article>
 <div id="resumename" style={{display:'none', position:'absolute', top:'-4rem', fontSize:'160%', padding:'0 0 2rem 4rem', textAlign:'left', width:'100%',}}>{companyname}<br />
