@@ -14,12 +14,11 @@ showSocial: true
 showResume: true
 youtuber: ""
 resume:
-  highlightsText: <p><strong>Business Management, Marketing and
-    Sales</strong></p><p> 19 years of customer service including, retail sales,
-    business sales, marketing, and multi-level management experience. I have
-    served various positions of increasing responsibility. I have gained and
-    enhanced my abilities to strive forward in leadership, decision-making,
-    problem solving, and sales opportunities.</p>
+  highlightsText: >-
+    **Business Management, Marketing and Sales**
+
+
+    19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
   highlightsTitle: Highlights
   profTitle: Proficiency
   profText: <ul> <li>Reputable background and foundation built b2b & b2c sales
