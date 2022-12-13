@@ -184,22 +184,22 @@ module.exports = {
 
 
     `gatsby-plugin-sitemap`,
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://deighleen.com',
-        sitemap: 'https://deighleen.com/sitemap.xml',
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          development: {
-            policy: [{ userAgent: '*', allow: ['/'] }]
-          },
-          production: {
-            policy: [{ userAgent: '*', allow: '/' }]
-          }
-        }
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-robots-txt',
+    //   options: {
+    //     host: 'https://deighleen.com',
+    //     sitemap: 'https://deighleen.com/sitemap.xml',
+    //     resolveEnv: () => process.env.GATSBY_ENV,
+    //     env: {
+    //       development: {
+    //         policy: [{ userAgent: '*', allow: ['/'] }]
+    //       },
+    //       production: {
+    //         policy: [{ userAgent: '*', allow: '/' }]
+    //       }
+    //     }
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

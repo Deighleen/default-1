@@ -25,6 +25,7 @@ import { Social } from "../components/social"
 import BlogListHome from "../components/blog-list-home"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
+// import Highlights from "../templates/highlights-page"
 
 
 const CustomBox = styled.div`
@@ -139,10 +140,6 @@ export const pageQuery = graphql`
             date(formatString: "YYYY-MM-DD-HH-MM-SS")
             slug
             title
-            nftdrop
-            nftdrop
-  
-            
             featuredImage {
               publicURL
               childImageSharp {
@@ -195,7 +192,8 @@ const HomePage = ({ data }) => {
     // const showCTA = frontmatter.cta.ctaText
     const CtaLink = frontmatter.cta.ctaLink
     const coverLink = frontmatter.coverletter.coverLink
-    const showExperience = frontmatter.resume.highlightsText
+    
+    const showExperience = frontmatter.resume.exText
 
 
     const openQuote = frontmatter.portfolio.openText
@@ -658,8 +656,12 @@ const YouTube = frontmatter.youtuber
 {/* end show Resume */}
 {ShowResume ? (
 
+ 
+
 
 <section id="resume" name="resume" style={{ display:'', height:'', overflow:'', margin:'1rem', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}}>
+
+
 
 <article>
 <div id="resumename" style={{display:'none', position:'absolute', top:'-4rem', fontSize:'160%', padding:'0 0 2rem 4rem', textAlign:'left', width:'100%',}}>{companyname}<br />
