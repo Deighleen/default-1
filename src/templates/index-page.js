@@ -195,7 +195,8 @@ const HomePage = ({ data }) => {
     // const showCTA = frontmatter.cta.ctaText
     const CtaLink = frontmatter.cta.ctaLink
     const coverLink = frontmatter.coverletter.coverLink
-    
+    const showExperience = frontmatter.resume.highlightsText
+
 
     const openQuote = frontmatter.portfolio.openText
     const closeQuote = frontmatter.portfolio.closeText
@@ -612,7 +613,9 @@ const YouTube = frontmatter.youtuber
 
 
 
-        <BlogListHome data={posts} />
+        {/* <BlogListHome data={posts} /> */}
+
+        {posts}
 
 {closeQuote ? (
 
@@ -722,10 +725,9 @@ const YouTube = frontmatter.youtuber
       <div
           style={{}}
             className=""
-            dangerouslySetInnerHTML={{ __html: frontmatter.resume.exText }}
+            dangerouslySetInnerHTML={{ __html: showExperience }}
           />
 
-      
       
 
       
