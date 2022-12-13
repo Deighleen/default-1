@@ -46,7 +46,7 @@ resume:
 
     <p><strong>Nextel Partners, 1999 - 2010</strong><br /><em>Area General Manager</em></p> <p>Responsible for all daily operations of 9 high volume retail locations & B2B Sales Team. Trained retail associates and business sales consultants. </p> <p>Developed new business and customer prospects. Achieved and surpassed sales goals with Retail locations and with B2B customers for 6 consecutive years. Developed high standards of public relations and networking strategies to acquire new and retain existing accounts.</p>
 UnderlayImage: /assets/Experiences-Header-5.jpg
-underlayImage: /assets/Experiences-Header-5.jpg
+underlayImage: ""
 youtuber: ""
 youtubeautostart: "1"
 showPosts: false
