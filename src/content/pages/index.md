@@ -1,12 +1,12 @@
 ---
 slug: /
-title: Business Management & Marketing
 tagline: Energetic, forward-thinking and loyally dedicated
 featuredImage: /assets/default-og-image.jpg
 secondaryImage: /assets/deighleen.webp
 portfolio:
   openText: ""
   closeText: ""
+UnderlayImage: /assets/Experiences-Header-5.jpg
 showInfo: "1"
 showSocial: true
 showResume: true
@@ -47,15 +47,16 @@ resume:
 
     <p><strong>Nextel Partners, 1999 - 2010</strong><br /><em>Area General Manager</em></p> <p>Responsible for all daily operations of 9 high volume retail locations & B2B Sales Team. Trained retail associates and business sales consultants. </p> <p>Developed new business and customer prospects. Achieved and surpassed sales goals with Retail locations and with B2B customers for 6 consecutive years. Developed high standards of public relations and networking strategies to acquire new and retain existing accounts.</p>
 underlayImage: /assets/samples/starry.png
-showPosts: false
 youtuber: ""
 youtubeautostart: "1"
+showPosts: false
 cta:
   ctaText: Contact Me
   ctaLink: ""
 address:
   addressText: Gulfport, MS
 svgImage: /assets/transparent.png
+title: Business Management & Marketing
 youtubeend: ""
 showFeature: false
 shareable: ""
