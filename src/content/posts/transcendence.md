@@ -3,7 +3,7 @@ youtubersuggestion3: https://youtu.be/LE5m5aawuao
 youtuber2: mkYKF5hQQ6M
 audioend: "5000"
 nftdrop: ""
-slug: /transcendence
+slug: /firstpost
 audiostart: "33"
 date: 2022-01-01 01:43
 youtuber: iHxmNzMfDj4
@@ -13,7 +13,7 @@ youtubeautostart: "1"
 youtubeshoworiginal: ""
 comments: ""
 nftlink: ""
-title: Transcendence
+title: First Post
 svgImage: /assets/campfire.svg
 nftredeem: ""
 template: blog-post
@@ -30,4 +30,4 @@ youtubestart: "1"
 ---
 Shot in the Valley of the Gods in southern Utah, the original image is comprised of 72 photos shot during time-lapse and then stacked together to illustrate the movement of the earth.
 
-May peace be with you, always.
+May **peace** be with you, always.
