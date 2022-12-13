@@ -110,7 +110,7 @@ collections:
           - { label: "Tagline", name: "tagline", widget: "string" }
           - { label: "Featured Image", name: "featuredImage", widget: "image" }
           - { label: "Profile/Avatar", name: "secondaryImage", widget: "image", hint: "This is your profile picture or avatar", required: false }
-          - { label: "Profile Background", name: "UnderlayImage", widget: "image", hint: "This is your profile section background", required: false }
+          - { label: "Profile Background", name: "underlayImage", widget: "image", hint: "This is your profile section background", required: false }
           - { label: "Show Feature", name: "showFeature", widget: "boolean" }
           - { label: "Show Info", name: "showInfo", widget: "boolean" }
           - { label: "Show Posts", name: "showPosts", widget: "boolean" }
