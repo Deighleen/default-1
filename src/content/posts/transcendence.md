@@ -13,7 +13,7 @@ youtubeautostart: "1"
 youtubeshoworiginal: ""
 comments: ""
 nftlink: ""
-title: Transcendence
+title: First Post
 svgImage: /assets/campfire.svg
 nftredeem: ""
 template: blog-post
