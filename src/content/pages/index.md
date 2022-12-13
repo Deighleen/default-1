@@ -52,7 +52,7 @@ youtuber: ""
 youtubeautostart: "1"
 cta:
   ctaText: Contact Me
-  ctaLink: /contact
+  ctaLink: ""
 address:
   addressText: Gulfport, MS
 svgImage: /assets/transparent.png
@@ -66,7 +66,7 @@ description: MyResume - Next-Gen Resume Platform
 svgzindex: ""
 coverletter:
   coverText: Cover Letter
-  coverLink: /cover
+  coverLink: ""
 address2:
   addressText2: ""
 youtubestart: "1"

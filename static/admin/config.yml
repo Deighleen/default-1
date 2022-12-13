@@ -126,6 +126,7 @@ collections:
               - name: "ctaLink"
                 label: "Custom Link"
                 widget: "string"
+                required: false 
           - label: "Cover Letter Link"
             name: "coverletter"
             widget: "object"
@@ -136,6 +137,7 @@ collections:
               - name: "coverLink"
                 label: "Custom Link"
                 widget: "string"
+                required: false 
           - label: "Address"
             name: "address"
             widget: "object"
@@ -143,9 +145,11 @@ collections:
               - name: "addressText"
                 label: "Your Address"
                 widget: "string"
+                required: false 
           - label: "Address2"
             name: "address2"
             widget: "object"
+            required: false 
             fields:
               - name: "addressText2"
                 label: "Your Address2"
