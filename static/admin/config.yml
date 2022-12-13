@@ -187,7 +187,6 @@ collections:
               - name: "exText"
                 label: "Experience/Work History Text"
                 widget: "markdown"
-                pattern: ['^.{20,3500}$', "Must have less than 2000 characters"]
       - label: "Cover Letter"
         name: "cover"
         file: "src/content/pages/about.md"
