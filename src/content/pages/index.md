@@ -57,7 +57,7 @@ address:
   addressText: Gulfport, MS
 svgImage: /assets/transparent.png
 youtubeend: ""
-showFeature: false
+showFeature: true
 shareable: ""
 youtubecontrols: "1"
 template: index-page
