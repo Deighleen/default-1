@@ -116,6 +116,14 @@ collections:
           - { label: "Show Social Links", name: "showSocial", widget: "boolean", default: "true", required: false }
           - { label: "YouTube Url", name: "youtuber", widget: "string",required: false }
           - { label: "Body", name: "body", widget: "markdown" }
+          - {
+          label: "Underlay Image",
+          name: "underlayImage",
+          widget: "image",
+          hint: "This puts a background image behind the profile section of the site",
+          required: false,
+          tagname: "",
+        }
           - label: "Contact Button"
             name: "cta"
             widget: "object"

@@ -192,7 +192,6 @@ const HomePage = ({ data }) => {
     const ShowResume = frontmatter.showResume
     const showSocial = frontmatter.showSocial
     const showfooter = useSiteMetadata()
-
     // const showCTA = frontmatter.cta.ctaText
     const CtaLink = frontmatter.cta.ctaLink
     const coverLink = frontmatter.coverletter.coverLink
@@ -202,6 +201,7 @@ const HomePage = ({ data }) => {
     const closeQuote = frontmatter.portfolio.closeText
     
 
+    
     // const { siteColor } = useSiteMetadata()
 
     // const SiteColor = sitecolor
@@ -452,10 +452,11 @@ const YouTube = frontmatter.youtuber
 
 
 
+
 {UnderlayImage ? (
 
   <div className="nameblock" style={{margin:'20px auto 0 auto', padding:'0 0 10px 0',alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center', color:'#fff', border:'0px solid red', maxWidth:'80%', paddingTop:'1rem', background:'rgba(0,0,0,0.50)', borderRadius:'10px', textShadow:'0 2px 7px #000', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}} >
-<span style={{color:'', fontSize:'160%'}}>{frontmatter.officialname.nameText}</span>
+<span style={{color:'', fontSize:'160%'}}>{companyname}</span>
 {frontmatter.address.addressText}
 <br />
 {frontmatter.address2.addressText2}
