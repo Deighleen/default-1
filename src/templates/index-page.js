@@ -613,9 +613,8 @@ const YouTube = frontmatter.youtuber
 
 
 
-        {/* <BlogListHome data={posts} /> */}
-
-        {posts}
+        <BlogListHome data={posts} />
+        
 
 {closeQuote ? (
 
