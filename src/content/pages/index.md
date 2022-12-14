@@ -73,8 +73,6 @@ address2:
 youtubestart: "1"
 ---
 <!-- Do not delete -->
-<div>
-<!-- Do not delete -->
 
 ## Highlights
 
@@ -106,9 +104,10 @@ Oregon Community College, Portland, OR.
 
 STEP FORWARD Management Classes
 
-
+> `Tiddy goe fast - when you're on the grass`
 
 <!-- Do not delete -->
+
 </div>
 <div>
 <!-- Do not delete -->
@@ -142,5 +141,6 @@ Duties include overseeing day to day store operations that include, hiring, and 
 Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads.
 
 <!-- Do not delete -->
+
 </div>
 <!-- Do not delete -->
