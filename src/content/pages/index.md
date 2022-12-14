@@ -38,13 +38,15 @@ address2:
   addressText2: ""
 youtubestart: "1"
 ---
-<!-- Do not delete -->
+<!-- Add <div> for two column -->
+
 <div>
-<!-- Do not delete -->
+
+<!-- close </div>-->
 
 ## Highlights
 
-Business Management, Marketing and Sales
+**Business Management, Marketing and Sales**
 
 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
 
@@ -72,10 +74,14 @@ Oregon Community College, Portland, OR.
 
 STEP FORWARD Management Classes
 
-
-
 <!-- Do not delete -->
+
 </div>
+
+<!-- close </div>-->
+
+<!-- add a <div> for two column -->
+
 <div>
 <!-- Do not delete -->
 
@@ -108,5 +114,7 @@ Duties include overseeing day to day store operations that include, hiring, and 
 Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads.
 
 <!-- Do not delete -->
+
 </div>
-<!-- Do not delete -->
+
+<!-- close </div>-->
