@@ -746,6 +746,40 @@ height:0;
 
 .flexbutt {display:flex; }
 
+
+#resume { 
+  border:0px solid yellow;
+  padding:0 0 0 0;
+}
+
+#resume span{display:flex; position:sticky; top:0;
+  gap:40px;
+  flex-direction: row;
+}
+
+
+#resume span div { 
+ border:0px solid green;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width:50%;
+}
+
+@media (max-width: 48rem) {
+  #resume span div{
+    display:block !important; width:100% !important;
+  }
+  #resume span{display:flex; position:sticky; top:0;
+    gap:20px;
+    flex-direction: column;
+  }
+
+}
+
+
+
+
 .flexcheek {width:50%; position:sticky; top:0;}
 
 .introspace{padding-top:60vh;}

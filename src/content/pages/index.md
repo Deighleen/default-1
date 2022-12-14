@@ -10,12 +10,11 @@ showInfo: "1"
 showSocial: true
 showResume: true
 resume:
-  highlightsText: <p><strong>Business Management, Marketing and
-    Sales</strong></p><p> 19 years of customer service including, retail sales,
-    business sales, marketing, and multi-level management experience. I have
-    served various positions of increasing responsibility. I have gained and
-    enhanced my abilities to strive forward in leadership, decision-making,
-    problem solving, and sales opportunities.</p>
+  highlightsText: Deighleen has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience.
+
+    I have served various positions of increasing responsibility.
+
+    I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
   highlightsTitle: Highlights
   profTitle: Proficiency
   profText: <ul> <li>Reputable background and foundation built b2b & b2c sales
@@ -71,8 +70,23 @@ address2:
   addressText2: ""
 youtubestart: "1"
 ---
-Deighleen has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience.
 
-I have served various positions of increasing responsibility.
+<div>
+<h2><strong>Highlights</strong></h2>
+Business Management, Marketing and Sales
 
-I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
+19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
+
+</div>
+
+<div>
+<h2><strong>Experience</strong></h2>
+<strong>Dollar General | 2018 - 2021</strong>
+Store Manager
+
+Equipped with extensive experience in retail management and sales. Employs excellent leadership skills and multi-tasking strengths. Well versed in all aspects of running a high-end store, including opening and closing procedures, banking, merchandising and recruiting.
+
+Responsibilities included customer service, hiring and training of sta!, opening/closing of store, cash and shrink management, P&L management, sales growth, vendor relations, ad sets, planner sets, and POG sets.
+
+
+</div>

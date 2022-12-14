@@ -141,6 +141,7 @@ module.exports = {
     `gatsby-remark-responsive-iframe`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-theme-ui",
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {

@@ -193,8 +193,8 @@ const HomePage = ({ data }) => {
     const CtaLink = frontmatter.cta.ctaLink
     const coverLink = frontmatter.coverletter.coverLink
     
-    const showExperience = frontmatter.resume.exText
-
+    // const showExperience = frontmatter.resume.exText
+    const HighlightsText = frontmatter.resume.highlightsText
 
     const openQuote = frontmatter.portfolio.openText
     const closeQuote = frontmatter.portfolio.closeText
@@ -423,8 +423,10 @@ const YouTube = frontmatter.youtuber
             <div
             style={{}}
               className="description"
-              dangerouslySetInnerHTML={{ __html: html }}
+              dangerouslySetInnerHTML={{ __html: HighlightsText }}
             />
+
+            
            
             </div>
 
@@ -670,11 +672,17 @@ const YouTube = frontmatter.youtuber
 {frontmatter.address2.addressText2} */}
 </div>
 
-  <div id="" className="flexbutt" style={{display:'flex', gap:'40px', justifyContent:'flex-start', alignItems:'baseline', padding:'0 4%'}}>
+<div id="resume" className="">
 
+<span
+          style={{}}
+            className=""
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+</div>
 
+  {/* <div id="" className="flexbutt" style={{display:'flex', gap:'40px', justifyContent:'flex-start', alignItems:'baseline', padding:'0 4%'}}>
 
-        
 <div id="" className="flexcheek leftside" style={{ position:'', top:'', order:'', }} >
  
 <h3 className="title1" style={{textAlign:'left', margin:'0 0 0 0', fontWeight:'bold', clear:'right', paddingTop:'0',}}>{frontmatter.resume.highlightsTitle}</h3>
@@ -684,20 +692,12 @@ const YouTube = frontmatter.youtuber
             dangerouslySetInnerHTML={{ __html: frontmatter.resume.highlightsText }}
           />
 
-
-
-
-
 <h3 className="title1" style={{textAlign:'left', margin:'0 0 0 0', fontWeight:'bold', clear:'right', paddingTop:'0',}}>{frontmatter.resume.profTitle}</h3>
 <div
           style={{}}
             className=""
             dangerouslySetInnerHTML={{ __html: frontmatter.resume.profText }}
           />
-
-
-
-
 
 <h3 className="title1" style={{textAlign:'left', margin:'0 0 0 0', fontWeight:'bold', clear:'right', paddingTop:'0',}}>{frontmatter.resume.eduTitle}</h3>
 <div
@@ -709,18 +709,8 @@ const YouTube = frontmatter.youtuber
  </div> 
 
 
-
-
-
-
       <div id="" className="flexcheek rightside" style={{order:''}}>
- 
- 
 
-      
-
-
- 
       <h3 className="title1" style={{textAlign:'left', margin:'0 0 0 0', fontWeight:'bold', clear:'right', paddingTop:'0',}}>{frontmatter.resume.exTitle}</h3>
 
       <div
@@ -729,38 +719,14 @@ const YouTube = frontmatter.youtuber
             dangerouslySetInnerHTML={{ __html: showExperience }}
           />
 
-      
-
-      
-
-
-
-
-
-
-
       </div> 
       
-</div>
+</div> */}
 
 </article>
 
 
 
-
-{/* <div style={{fontSize:'90%', textAlign:'center', display:'grid', flexDirection:'row', verticalAlign:'middle', justifyContent:'center', lineHeight:'200%', margin:'0 auto', padding:' .5rem 1rem', backdropFilter:'blur(14px)',}}>
-    
-    <div style={{textAlign:'', display:'flex', alignContent:'', marginBottom:'1rem', width:''}}>
-   <IoShareOutline style={{fontSize:'',}} />
-  
-  </div>
-  
-   <div style={{textAlign:'', display:'flex', alignContent:'', width:''}}>
-   <FaRegPlusSquare style={{fontSize:'',}} /> 
-  'Add to Home Screen'
-   </div>
-   
-   </div> */}
 
 
 
