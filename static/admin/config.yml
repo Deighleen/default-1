@@ -116,7 +116,16 @@ collections:
           - { label: "Profile/Avatar", name: "secondaryImage", widget: "image", hint: "This is your profile picture or avatar", required: false }
           - { label: "Profile Background", name: "underlayImage", widget: "image", hint: "This is your profile section background", required: false }
           - { label: "YouTube Url", name: "youtuber", widget: "string",required: false }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Resume"
+            name: "resume"
+            widget: "object"
+            fields:
+              - name: "profTitle"
+                label: "Proficiency/Skills Title"
+                widget: "string"
+              - name: "profText"
+                label: "Proficiency/Skills Text"
+                widget: "markdown"
           - label: "Contact Button"
             name: "cta"
             widget: "object"
@@ -156,17 +165,7 @@ collections:
                 label: "Your Address2"
                 widget: "string"
                 required: false 
-          - label: "Resume"
-            name: "resume"
-            widget: "object"
-
-            fields:
-              - name: "profTitle"
-                label: "Proficiency/Skills Title"
-                widget: "string"
-              - name: "profText"
-                label: "Proficiency/Skills Text"
-                widget: "markdown"
+      - { label: "Body", name: "body", widget: "markdown" }
       - label: "Cover Letter"
         name: "cover"
         file: "src/content/pages/about.md"
