@@ -74,7 +74,6 @@ youtubestart: "1"
 ---
 <div>
 
-
 ## Highlights
 
 Business Management, Marketing and Sales
@@ -97,7 +96,6 @@ Budgets and Key Performance Indicators
 
 ## Education
 
-\
 Graduated Hillsboro High School, Hillsboro, OR.
 
 Business Management Courses
@@ -105,8 +103,6 @@ Business Management Courses
 Oregon Community College, Portland, OR.
 
 STEP FORWARD Management Classes
-
-
 
 </div>
 
@@ -124,7 +120,7 @@ Responsibilities included customer service, hiring and training of sta!, opening
 
 **Winn Dixie | 2016 - 2018**
 
-Floral Manager\
+Floral Manager
 Current responsibilities include daily creation of both attractive and profitable arrangements.
 
 Support given to General Manager with strong communication skills and strategic product merchandising.
@@ -135,7 +131,7 @@ Other daily tasks include pricing accuracy, web and vendor ordering and knowledg
 
 **Clarks Bostonian Shoes | 2010 - 2016**
 
-Store Manager / Area Training Manager\
+Store Manager / Area Training Manager
 Duties include overseeing day to day store operations that include, hiring, and coaching, analyzing sales, setting store goals, and achieving sales budgets.
 
 Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads.
