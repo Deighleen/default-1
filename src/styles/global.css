@@ -749,7 +749,7 @@ height:0;
 
 #resume { 
   border:0px solid yellow;
-  padding:0 0 0 0;
+  padding:0 10px;
 }
 
 #resume span{display:flex; position:sticky; top:0;
@@ -778,6 +778,7 @@ height:0;
 }
 
 
+#resume h2{text-align: left !important; font-size:30px !important; border:0px solid red !important;}
 
 
 .flexcheek {width:50%; position:sticky; top:0;}
@@ -3022,7 +3023,7 @@ opacity:.8;
     
    .flexcheek {width:50%; position:relative !important; top:0;}
 
- h3{text-align: left !important; font-size:20px !important;}
+
 
     .footerstyle, .sidebarIconToggle, .back, .taggage, .infomenu, .sidebart, #posts, #feature, .print, #consent, .commentbox, .avatar-frame, .makeStyles-container-1, .usability {display: none !important;}
 
