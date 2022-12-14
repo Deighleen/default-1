@@ -108,8 +108,6 @@ Oregon Community College, Portland, OR.
 
 STEP FORWARD Management Classes
 
-> `Tiddy goe fast - when you're on the grass`
-
 <!-- Do not delete -->
 
 </div>
@@ -117,6 +115,7 @@ STEP FORWARD Management Classes
 <!-- close </div>-->
 
 <!-- add a <div> for two column -->
+
 <div>
 <!-- Do not delete -->
 
