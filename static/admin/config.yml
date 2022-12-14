@@ -95,7 +95,7 @@ collections:
     description: >
       Edit your home page. resume and cover letter here. You can also edit the privacy, terms and disclaimers and contact pages.
     files:
-      - label: "Home"
+      - label: "Profile and Resume"
         name: "home"
         file: "src/content/pages/index.md"
         fields:
@@ -108,13 +108,13 @@ collections:
           - { label: "Slug", name: "slug", widget: "hidden", default: "/" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Tagline", name: "tagline", widget: "string" }
-          - { label: "Featured Image", name: "featuredImage", widget: "image" }
-          - { label: "Profile/Avatar", name: "secondaryImage", widget: "image", hint: "This is your profile picture or avatar", required: false }
-          - { label: "Profile Background", name: "underlayImage", widget: "image", hint: "This is your profile section background", required: false }
           - { label: "Show Feature", name: "showFeature", widget: "boolean" }
           - { label: "Show Info", name: "showInfo", widget: "boolean" }
           - { label: "Show Posts", name: "showPosts", widget: "boolean" }
           - { label: "Show Social Links", name: "showSocial", widget: "boolean", default: "true", required: false }
+          - { label: "Featured Image", name: "featuredImage", widget: "image" }
+          - { label: "Profile/Avatar", name: "secondaryImage", widget: "image", hint: "This is your profile picture or avatar", required: false }
+          - { label: "Profile Background", name: "underlayImage", widget: "image", hint: "This is your profile section background", required: false }
           - { label: "YouTube Url", name: "youtuber", widget: "string",required: false }
           - { label: "Body", name: "body", widget: "markdown" }
           - label: "Contact Button"
@@ -161,32 +161,11 @@ collections:
             widget: "object"
 
             fields:
-              - name: "highlightsTitle"
-                label: "Highlights/Summary Title"
-                widget: "string"
-              - name: "highlightsText"
-                label: "Highlights/Summary Text"
-                widget: "markdown"
-
               - name: "profTitle"
                 label: "Proficiency/Skills Title"
                 widget: "string"
               - name: "profText"
                 label: "Proficiency/Skills Text"
-                widget: "markdown"
-
-              - name: "eduTitle"
-                label: "Education Title"
-                widget: "string"
-              - name: "eduText"
-                label: "Education Text"
-                widget: "markdown"
-                
-              - name: "exTitle"
-                label: "Experience/Work History Title"
-                widget: "string"
-              - name: "exText"
-                label: "Experience/Work History Text"
                 widget: "markdown"
       - label: "Cover Letter"
         name: "cover"
@@ -286,7 +265,7 @@ collections:
                 required: true
               - widget: text
                 name: description
-                label: Description
+                label: SEO Description
                 default: ""
                 required: false
               - widget: image

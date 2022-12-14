@@ -104,14 +104,8 @@ export const pageQuery = graphql`
           addressText2
         }
         resume {
-          highlightsTitle
-          highlightsText
           profTitle
           profText
-          eduTitle
-          eduText
-          exTitle
-          exText
         }
         portfolio{
           openText
@@ -193,8 +187,8 @@ const HomePage = ({ data }) => {
     const CtaLink = frontmatter.cta.ctaLink
     const coverLink = frontmatter.coverletter.coverLink
     
-    // const showExperience = frontmatter.resume.exText
-    const HighlightsText = frontmatter.resume.highlightsText
+    const ProfText = frontmatter.resume.profText
+ 
 
     const openQuote = frontmatter.portfolio.openText
     const closeQuote = frontmatter.portfolio.closeText
@@ -407,7 +401,7 @@ const YouTube = frontmatter.youtuber
             <div
             style={{}}
               className="description"
-              dangerouslySetInnerHTML={{ __html: html }}
+              dangerouslySetInnerHTML={{ __html: ProfText }}
             />
             </div>
   
@@ -415,7 +409,7 @@ const YouTube = frontmatter.youtuber
           
             <div className="flexcheek mob print" style={{padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.5vw, 3.2rem)',}}>
   
-              <h1 className="title1">{frontmatter.title}</h1>
+              <h1 className="title1">{frontmatter.resume.profTitle}</h1>
             <h2 className="tagline1">
               {frontmatter.tagline}
             </h2>
@@ -423,7 +417,7 @@ const YouTube = frontmatter.youtuber
             <div
             style={{}}
               className="description"
-              dangerouslySetInnerHTML={{ __html: HighlightsText }}
+              dangerouslySetInnerHTML={{ __html: ProfText }}
             />
 
             
@@ -486,7 +480,7 @@ const YouTube = frontmatter.youtuber
 <br />
 {frontmatter.address2.addressText2}
 <br /><br />
-{/* <Link state={{modal: true}} to="/contact/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', borderRadius:'8px', maxWidth:'600px'}}>Contact Me</Link> */}
+
 
 
 {CtaLink ? (
@@ -587,7 +581,7 @@ const YouTube = frontmatter.youtuber
 {ShowPosts ? (
 
 <div id="posts" name="posts">
-{/* <p style={{fontSize:'150%', textAlign:'center', margin:'0 0 0 0'}}>See it in action:</p> */}
+
 
 <div className="sliderholder" style={{display:'flex', justifyContent:'center', width:'100%', height:'60vh', overflow:'hidden', position:'relative',}}>
 
@@ -681,47 +675,7 @@ const YouTube = frontmatter.youtuber
           />
 </div>
 
-  {/* <div id="" className="flexbutt" style={{display:'flex', gap:'40px', justifyContent:'flex-start', alignItems:'baseline', padding:'0 4%'}}>
-
-<div id="" className="flexcheek leftside" style={{ position:'', top:'', order:'', }} >
- 
-<h3 className="title1" style={{textAlign:'left', margin:'0 0 0 0', fontWeight:'bold', clear:'right', paddingTop:'0',}}>{frontmatter.resume.highlightsTitle}</h3>
-<div
-          style={{}}
-            className=""
-            dangerouslySetInnerHTML={{ __html: frontmatter.resume.highlightsText }}
-          />
-
-<h3 className="title1" style={{textAlign:'left', margin:'0 0 0 0', fontWeight:'bold', clear:'right', paddingTop:'0',}}>{frontmatter.resume.profTitle}</h3>
-<div
-          style={{}}
-            className=""
-            dangerouslySetInnerHTML={{ __html: frontmatter.resume.profText }}
-          />
-
-<h3 className="title1" style={{textAlign:'left', margin:'0 0 0 0', fontWeight:'bold', clear:'right', paddingTop:'0',}}>{frontmatter.resume.eduTitle}</h3>
-<div
-            className=""
-            dangerouslySetInnerHTML={{ __html: frontmatter.resume.eduText }}
-          />
- 
-
- </div> 
-
-
-      <div id="" className="flexcheek rightside" style={{order:''}}>
-
-      <h3 className="title1" style={{textAlign:'left', margin:'0 0 0 0', fontWeight:'bold', clear:'right', paddingTop:'0',}}>{frontmatter.resume.exTitle}</h3>
-
-      <div
-          style={{}}
-            className=""
-            dangerouslySetInnerHTML={{ __html: showExperience }}
-          />
-
-      </div> 
-      
-</div> */}
+  
 
 </article>
 
