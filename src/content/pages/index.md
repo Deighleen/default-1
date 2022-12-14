@@ -75,6 +75,7 @@ youtubestart: "1"
 <!-- Do not delete -->
 <div>
 <!-- Do not delete -->
+
 ## Highlights
 
 Business Management, Marketing and Sales
@@ -97,7 +98,6 @@ Budgets and Key Performance Indicators
 
 ## Education
 
-\
 Graduated Hillsboro High School, Hillsboro, OR.
 
 Business Management Courses
@@ -136,7 +136,7 @@ Other daily tasks include pricing accuracy, web and vendor ordering and knowledg
 
 **Clarks Bostonian Shoes | 2010 - 2016**
 
-Store Manager / Area Training Manager\
+Store Manager / Area Training Manager
 Duties include overseeing day to day store operations that include, hiring, and coaching, analyzing sales, setting store goals, and achieving sales budgets.
 
 Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads.
