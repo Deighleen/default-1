@@ -1,16 +1,22 @@
 ---
 slug: /
+title: Business Management & Marketing
 tagline: Energetic, forward-thinking and loyally dedicated
 featuredImage: /assets/default-og-image.jpg
 secondaryImage: /assets/deighleen.webp
 portfolio:
   openText: ""
   closeText: ""
+underlayImage: null
 showInfo: "1"
+showPosts: false
 showSocial: true
 showResume: true
+youtuber: ""
 resume:
-  highlightsText: Deighleen has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience.
+  highlightsText: >-
+    Deighleen has over 19 years of customer service including, retail sales,
+    business sales, marketing, and multi-level management experience.
 
     I have served various positions of increasing responsibility.
 
@@ -44,17 +50,13 @@ resume:
     <p><strong>Clarks Bostonian Shoes | 2010 - 2016</strong><br /><em>Store Manager</em></p> <p>Duties include overseeing day to day store operations that include, hiring, and coaching, analyzing sales, setting store goals, and achieving sales budgets.</p> <p>Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads. Ensure that all daily, weekly, and monthly store reports are met at deadline.</p>
 
     <p><strong>Nextel Partners, 1999 - 2010</strong><br /><em>Area General Manager</em></p> <p>Responsible for all daily operations of 9 high volume retail locations & B2B Sales Team. Trained retail associates and business sales consultants. </p> <p>Developed new business and customer prospects. Achieved and surpassed sales goals with Retail locations and with B2B customers for 6 consecutive years. Developed high standards of public relations and networking strategies to acquire new and retain existing accounts.</p>
-underlayImage: null
-youtuber: ""
 youtubeautostart: "1"
-showPosts: false
 cta:
   ctaText: Contact Me
   ctaLink: ""
 address:
   addressText: Gulfport, MS
 svgImage: /assets/transparent.png
-title: Business Management & Marketing
 youtubeend: ""
 showFeature: false
 shareable: ""
@@ -70,9 +72,11 @@ address2:
   addressText2: ""
 youtubestart: "1"
 ---
-
 <div>
-<h2><strong>Highlights</strong></h2>
+
+
+### Highlights
+
 Business Management, Marketing and Sales
 
 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
@@ -80,13 +84,15 @@ Business Management, Marketing and Sales
 </div>
 
 <div>
-<h2><strong>Experience</strong></h2>
-<strong>Dollar General | 2018 - 2021</strong>
+
+### Experience
+
+**Dollar General | 2018 - 2021**
+
 Store Manager
 
 Equipped with extensive experience in retail management and sales. Employs excellent leadership skills and multi-tasking strengths. Well versed in all aspects of running a high-end store, including opening and closing procedures, banking, merchandising and recruiting.
 
 Responsibilities included customer service, hiring and training of sta!, opening/closing of store, cash and shrink management, P&L management, sales growth, vendor relations, ad sets, planner sets, and POG sets.
-
 
 </div>
