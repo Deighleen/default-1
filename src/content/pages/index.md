@@ -72,7 +72,11 @@ address2:
   addressText2: ""
 youtubestart: "1"
 ---
-<!-- Do not delete -->
+<!-- Add <div> for two column -->
+
+<div>
+
+<!-- close </div>-->
 
 ## Highlights
 
@@ -109,6 +113,10 @@ STEP FORWARD Management Classes
 <!-- Do not delete -->
 
 </div>
+
+<!-- close </div>-->
+
+<!-- add a <div> for two column -->
 <div>
 <!-- Do not delete -->
 
@@ -143,4 +151,5 @@ Provide team leadership by example. Display and communicate to my team, “World
 <!-- Do not delete -->
 
 </div>
-<!-- Do not delete -->
+
+<!-- close </div>-->
