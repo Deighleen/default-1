@@ -76,7 +76,7 @@ youtubestart: "1"
 
 ## Highlights
 
-Business Management, Marketing and Sales
+**Business Management, Marketing and Sales**
 
 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
 
