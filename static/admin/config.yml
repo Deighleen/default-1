@@ -117,9 +117,9 @@ collections:
           - { label: "Profile Background", name: "underlayImage", widget: "image", hint: "This is your profile section background", required: false }
           - { label: "YouTube Url", name: "youtuber", widget: "string",required: false }
           - { label: "Body", name: "body", widget: "markdown" }
-          - { label: "Contact Button"
-            name: "cta"
-            widget: "object"
+          - { label: "Contact Button",
+            name: "cta",
+            widget: "object",
             fields:
               - name: "ctaText"
                 label: "Button text"
