@@ -71,6 +71,10 @@ export const pageQuery = graphql`
         youtubemute
         youtubecontrols
         youtubeautostart
+        profTitle
+        profText
+        addressText
+        addressText2
         svgzindex
         tagline
         featuredImage {
@@ -96,16 +100,6 @@ export const pageQuery = graphql`
         coverletter {
           coverText
           coverLink
-        }
-        address {
-          addressText
-        }
-        address2 {
-          addressText2
-        }
-        resume {
-          profTitle
-          profText
         }
         portfolio{
           openText
@@ -187,7 +181,7 @@ const HomePage = ({ data }) => {
     const CtaLink = frontmatter.cta.ctaLink
     const coverLink = frontmatter.coverletter.coverLink
     
-    const ProfText = frontmatter.resume.profText
+    const ProfText = frontmatter.profText
  
 
     const openQuote = frontmatter.portfolio.openText
@@ -409,7 +403,7 @@ const YouTube = frontmatter.youtuber
           
             <div className="flexcheek mob print" style={{padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.5vw, 3.2rem)',}}>
   
-              <h1 className="title1">{frontmatter.resume.profTitle}</h1>
+              <h1 className="title1">{frontmatter.profTitle}</h1>
             <h2 className="tagline1">
               {frontmatter.tagline}
             </h2>
@@ -452,9 +446,9 @@ const YouTube = frontmatter.youtuber
 
   <div className="nameblock" style={{margin:'20px auto 0 auto', padding:'0 0 10px 0',alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center', color:'#fff', border:'0px solid red', maxWidth:'80%', paddingTop:'1rem', background:'rgba(0,0,0,0.50)', borderRadius:'10px', textShadow:'0 2px 7px #000', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}} >
 <span style={{color:'', fontSize:'160%'}}>{companyname}</span>
-{frontmatter.address.addressText}
+{frontmatter.addressText}
 <br />
-{frontmatter.address2.addressText2}
+{frontmatter.addressText2}
 <br /><br />
 <Link state={{modal: true}} to="/contact/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', maxWidth:'600px', paddingLeft:'3rem', paddingRight:'3rem' }}>Contact Me</Link>
 
@@ -476,9 +470,9 @@ const YouTube = frontmatter.youtuber
   
   <div className="nameblock" style={{margin:'0 auto 0 auto', alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center', border:'0px solid red', maxWidth:'80%', paddingTop:'1rem', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}} >
 <span style={{color:'', fontSize:'160%'}}>{companyname}</span>
-{frontmatter.address.addressText}
+{frontmatter.addressText}
 <br />
-{frontmatter.address2.addressText2}
+{frontmatter.addressText2}
 <br /><br />
 
 

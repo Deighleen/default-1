@@ -105,8 +105,14 @@ collections:
               widget: "hidden",
               default: "index-page",
             }
+
+
+
+   
+
+
           - { label: "Slug", name: "slug", widget: "hidden", default: "/" }
-          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page and SEO Title", name: "title", widget: "string" }
           - { label: "Tagline", name: "tagline", widget: "string" }
           - { label: "Show Feature", name: "showFeature", widget: "boolean" }
           - { label: "Show Info", name: "showInfo", widget: "boolean" }
@@ -116,18 +122,19 @@ collections:
           - { label: "Profile/Avatar", name: "secondaryImage", widget: "image", hint: "This is your profile picture or avatar", required: false }
           - { label: "Profile Background", name: "underlayImage", widget: "image", hint: "This is your profile section background", required: false }
           - { label: "YouTube Url", name: "youtuber", widget: "string",required: false }
+
+          - { label: "Profile Title", name: "profTitle", widget: "string",
+           required: false }
+
+          - { label: "Profile text (intro)", name: "profText", widget: "string", required: false }
+
+          - { label: "Your Address", name: "addressText", widget: "string", required: false }
+          - { label: "Your Address 2", name: "addressText2", widget: "string", required: false }
+
+
           - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Contact Button"
-            name: "cta"
-            widget: "object"
-            fields:
-              - name: "ctaText"
-                label: "Button text"
-                widget: "string"
-              - name: "ctaLink"
-                label: "Custom Link"
-                widget: "string"
-                required: false 
+
+
           - label: "Cover Letter Link"
             name: "coverletter"
             widget: "object"
@@ -139,34 +146,19 @@ collections:
                 label: "Custom Link"
                 widget: "string"
                 required: false 
-          - label: "Address"
-            name: "address"
-            widget: "object"
-            fields:
-              - name: "addressText"
-                label: "Your Address"
-                widget: "string"
-                required: false 
-          - label: "Address2"
-            name: "address2"
-            widget: "object"
-            required: false 
-            fields:
-              - name: "addressText2"
-                label: "Your Address2"
-                widget: "string"
-                required: false 
-          - label: "Resume"
-            name: "resume"
-            widget: "object"
 
+          - label: "Contact Button"
+            name: "cta"
+            widget: "object"
             fields:
-              - name: "profTitle"
-                label: "Proficiency/Skills Title"
+              - name: "ctaText"
+                label: "Button text"
                 widget: "string"
-              - name: "profText"
-                label: "Proficiency/Skills Text"
-                widget: "markdown"
+              - name: "ctaLink"
+                label: "Custom Link"
+                widget: "string"
+                required: false
+
       - label: "Cover Letter"
         name: "cover"
         file: "src/content/pages/about.md"

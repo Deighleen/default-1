@@ -13,15 +13,14 @@ showPosts: false
 showSocial: true
 showResume: true
 youtuber: ""
-resume:
-  profTitle: Business Management & Marketing
-  profText: Deighleen has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
+profTitle: Business Management & Marketing
+profText: Deighleen has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
+addressText: Gulfport, MS
+addressText2: ""
 youtubeautostart: "1"
 cta:
   ctaText: Contact Me
   ctaLink: ""
-address:
-  addressText: Gulfport, MS
 svgImage: /assets/transparent.png
 youtubeend: ""
 showFeature: false
@@ -34,8 +33,6 @@ svgzindex: ""
 coverletter:
   coverText: Cover Letter
   coverLink: ""
-address2:
-  addressText2: ""
 youtubestart: "1"
 ---
 <!-- Add <div> for two column -->
