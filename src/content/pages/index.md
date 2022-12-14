@@ -72,9 +72,9 @@ address2:
   addressText2: ""
 youtubestart: "1"
 ---
+<!-- Do not delete -->
 <div>
-
-
+<!-- Do not delete -->
 ## Highlights
 
 Business Management, Marketing and Sales
@@ -108,9 +108,10 @@ STEP FORWARD Management Classes
 
 
 
+<!-- Do not delete -->
 </div>
-
 <div>
+<!-- Do not delete -->
 
 ## Experience
 
@@ -124,7 +125,7 @@ Responsibilities included customer service, hiring and training of sta!, opening
 
 **Winn Dixie | 2016 - 2018**
 
-Floral Manager\
+Floral Manager
 Current responsibilities include daily creation of both attractive and profitable arrangements.
 
 Support given to General Manager with strong communication skills and strategic product merchandising.
@@ -140,4 +141,6 @@ Duties include overseeing day to day store operations that include, hiring, and 
 
 Provide team leadership by example. Display and communicate to my team, “World Class Service,” at all times to every guest, every day. Identify, prioritize, and delegate workloads.
 
+<!-- Do not delete -->
 </div>
+<!-- Do not delete -->
