@@ -6,7 +6,7 @@ import { Layout } from "../components/layout"
 import GoBack from "../components/goBack"
 import { Footer } from "../components/footer"
 export const pageQuery = graphql`
-  query highlightsQuery($id: String!) {
+  query notesQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -17,7 +17,7 @@ export const pageQuery = graphql`
     }
   }
 `
-const Highlights = ({ data }) => {
+const Notes = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html, excerpt } = markdownRemark
 
@@ -54,4 +54,4 @@ const Highlights = ({ data }) => {
   )
 }
 
-export default Highlights
+export default Notes

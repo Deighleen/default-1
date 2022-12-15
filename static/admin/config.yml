@@ -119,9 +119,10 @@ collections:
           - { label: "Show Posts", name: "showPosts", widget: "boolean" }
           - { label: "Show Social Links", name: "showSocial", widget: "boolean", default: "true", required: false }
           - { label: "Featured Image", name: "featuredImage", widget: "image" }
+          - { label: "YouTube Url", name: "youtuber", hint: "Add YouTube video to hero section", widget: "string", required: false }
           - { label: "Profile/Avatar", name: "secondaryImage", widget: "image", hint: "This is your profile picture or avatar", required: false }
           - { label: "Profile Background", name: "underlayImage", widget: "image", hint: "This is your profile section background", required: false }
-          - { label: "YouTube Url", name: "youtuber", widget: "string",required: false }
+          
 
           - { label: "Profile Title", name: "profTitle", widget: "string",
            required: false }
@@ -132,7 +133,7 @@ collections:
           - { label: "Your Address 2", name: "addressText2", widget: "string", required: false }
 
 
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Resume", name: "body", widget: "markdown" }
 
 
           - label: "Cover Letter Link"
@@ -162,6 +163,19 @@ collections:
       - label: "Cover Letter"
         name: "cover"
         file: "src/content/pages/about.md"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "Slug", name: "slug", widget: "hidden", default: "/notes" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Interview Notes"
+        name: "notes"
+        file: "src/content/pages/notes.md"
         fields:
           - {
               label: "Template",
