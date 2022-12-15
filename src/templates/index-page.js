@@ -65,6 +65,7 @@ export const pageQuery = graphql`
         showInfo
         showResume
         showSocial
+        showSkills
         youtuber
         youtubestart
         youtubeend
@@ -176,10 +177,12 @@ const HomePage = ({ data }) => {
     const ShowPosts = frontmatter.showPosts
     const ShowResume = frontmatter.showResume
     const showSocial = frontmatter.showSocial
+    const showSkills = frontmatter.showSkills
     const showfooter = useSiteMetadata()
     // const showCTA = frontmatter.cta.ctaText
     const CtaLink = frontmatter.cta.ctaLink
     const coverLink = frontmatter.coverletter.coverLink
+    
     
     const ProfText = frontmatter.profText
  
@@ -641,6 +644,15 @@ const YouTube = frontmatter.youtuber
 
 
 
+{showSkills ? (
+           <Link state={{modal: true}} to="/skills/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'2rem auto', textAlign:'center', borderRadius:'8px', maxWidth:'600px', padding:'1rem', display:'grid', placeContent:'center'}}>View Skills &amp; Capabilities</Link>
+       
+          ) : (
+            ""
+          )}
+
+
+
 
 
 {/* end show Resume */}
@@ -711,13 +723,18 @@ const YouTube = frontmatter.youtuber
 
  <div className="themer" order="4" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important'}} /></span></div>
  
- <div order="5" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+  <div order="5" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+  <Link state={{modal: true}} to="/skills/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Skills</Link>
+  </div>
+
+
+ <div order="6" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
   <Link state={{modal: true}} to="/notes/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Notes</Link>
   </div>
 
- <div order="6" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+ {/* <div order="7" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
   <Link state={{modal: true}} to="/tips/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Tips</Link>
-  </div>
+  </div> */}
 
 
  </div>
