@@ -1,30 +1,29 @@
 ---
 slug: /
+title: Business Management & Marketing
 tagline: Energetic, forward-thinking and loyally dedicated
-showInfo: "1"
-showSocial: true
 featuredImage: /assets/default-og-image.jpg
-youtuber: ""
 secondaryImage: /assets/deighleen.webp
-underlayImage: null
-profText: Deighleen has over 19 years of customer service including, retail
-  sales, business sales, marketing, and multi-level management experience. I
-  have served various positions of increasing responsibility. I have gained and
-  enhanced my abilities to strive forward in leadership, decision-making,
-  problem solving, and sales opportunities.
-addressText: Gulfport, MS
 portfolio:
   openText: ""
   closeText: ""
-showResume: true
-youtubeautostart: "1"
+underlayImage: null
+showInfo: "1"
 showPosts: false
+showSocial: true
+showResume: true
+showSkills: false
+showCover: false
+youtuber: ""
+profTitle: Business Management & Marketing
+profText: Deighleen has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
+addressText: Gulfport, MS
 addressText2: ""
+youtubeautostart: "1"
 cta:
   ctaText: Contact Me
   ctaLink: ""
 svgImage: /assets/transparent.png
-title: Business Management & Marketing
 youtubeend: ""
 showFeature: false
 shareable: ""
@@ -33,8 +32,6 @@ template: index-page
 youtubemute: "1"
 description: MyResume - Next-Gen Resume Platform
 svgzindex: ""
-showSkills: false
-profTitle: Business Management & Marketing
 coverletter:
   coverText: Cover Letter
   coverLink: ""

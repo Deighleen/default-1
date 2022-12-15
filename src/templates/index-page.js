@@ -66,6 +66,7 @@ export const pageQuery = graphql`
         showResume
         showSocial
         showSkills
+        showCover
         youtuber
         youtubestart
         youtubeend
@@ -178,6 +179,7 @@ const HomePage = ({ data }) => {
     const ShowResume = frontmatter.showResume
     const showSocial = frontmatter.showSocial
     const showSkills = frontmatter.showSkills
+    const showCover = frontmatter.showCover
     const showfooter = useSiteMetadata()
     // const showCTA = frontmatter.cta.ctaText
     const CtaLink = frontmatter.cta.ctaLink
@@ -462,9 +464,17 @@ const YouTube = frontmatter.youtuber
             ""
           )}
 
-<br />
-<Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>View cover letter</Link>
-<br />
+
+
+{showCover ? (
+          
+          <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>View cover letter</Link>
+       
+          ) : (
+            ""
+          )}
+
+
 
 
 </div>
@@ -520,6 +530,9 @@ const YouTube = frontmatter.youtuber
 )} */}
 
 
+{showCover ? (
+          
+<div>
 {coverLink ? (
 
           <a href={frontmatter.coverletter.coverLink} rel="noreferrer" target="_blank" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</a>
@@ -529,6 +542,16 @@ const YouTube = frontmatter.youtuber
             <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</Link>
 
 )}
+</div>
+       
+          ) : (
+            ""
+          )}
+
+
+
+
+
 
 
 
