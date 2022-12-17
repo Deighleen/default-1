@@ -21,6 +21,7 @@ import ReactPlayer from 'react-player/lazy'
 
 import styled from "styled-components"
 import { Social } from "../components/social"
+// import Skills from "../templates/skills-page"
 // import Newsignup from "../components/newssign"
 import BlogListHome from "../components/blog-list-home"
 import { Seo } from "../components/seo"
@@ -66,7 +67,6 @@ export const pageQuery = graphql`
         showResume
         showSocial
         showSkills
-        showCover
         youtuber
         youtubestart
         youtubeend
@@ -179,7 +179,6 @@ const HomePage = ({ data }) => {
     const ShowResume = frontmatter.showResume
     const showSocial = frontmatter.showSocial
     const showSkills = frontmatter.showSkills
-    const showCover = frontmatter.showCover
     const showfooter = useSiteMetadata()
     // const showCTA = frontmatter.cta.ctaText
     const CtaLink = frontmatter.cta.ctaLink
@@ -464,17 +463,9 @@ const YouTube = frontmatter.youtuber
             ""
           )}
 
-
-
-{showCover ? (
-          
-          <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>View cover letter</Link>
-       
-          ) : (
-            ""
-          )}
-
-
+<br />
+<Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>View cover letter</Link>
+<br />
 
 
 </div>
@@ -530,9 +521,6 @@ const YouTube = frontmatter.youtuber
 )} */}
 
 
-{showCover ? (
-          
-<div>
 {coverLink ? (
 
           <a href={frontmatter.coverletter.coverLink} rel="noreferrer" target="_blank" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</a>
@@ -542,16 +530,6 @@ const YouTube = frontmatter.youtuber
             <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</Link>
 
 )}
-</div>
-       
-          ) : (
-            ""
-          )}
-
-
-
-
-
 
 
 
@@ -668,7 +646,7 @@ const YouTube = frontmatter.youtuber
 
 
 {showSkills ? (
-           <Link state={{modal: true}} to="/skills/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'2rem auto', textAlign:'center', borderRadius:'8px', maxWidth:'600px', padding:'1rem', display:'grid', placeContent:'center'}}>View Skills &amp; Capabilities</Link>
+           <Link state={{modal: true}} to="/skills/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'2rem auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center'}}>View Skills &amp; Capabilities</Link>
        
           ) : (
             ""
@@ -747,12 +725,12 @@ const YouTube = frontmatter.youtuber
  <div className="themer" order="4" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important'}} /></span></div>
  
   <div order="5" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-  <Link state={{modal: true}} to="/skills/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Skills</Link>
+  <Link state={{modal: true}} to="/notes/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Notes</Link>
   </div>
 
 
  <div order="6" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-  <Link state={{modal: true}} to="/notes/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Notes</Link>
+  <Link state={{modal: true}} to="/admin/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Admin</Link>
   </div>
 
  {/* <div order="7" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
