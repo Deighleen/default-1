@@ -359,7 +359,7 @@ const YouTube = frontmatter.youtuber
             className="mcboaty print"
             placeholder="blurred" loading="eager"
               layout="constrained"
-              style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'cover', overflow:'', border:'0px solid red !important'}}
+              style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'-1', objectFit:'cover', overflow:'', border:'0px solid red !important'}}
           />
        
           ) : (
@@ -664,11 +664,12 @@ const YouTube = frontmatter.youtuber
  
 
 
-<section id="resume" name="resume" style={{ display:'', height:'', overflow:'', margin:'1rem', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}}>
+<section  style={{ display:'', height:'', overflow:'', margin:'', position:'relative'}}>
 
 
 
-<article>
+<article  style={{ display:'', height:'', overflow:'', padding:'1.6rem', margin:'0', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}}>
+
 <div id="resumename" style={{display:'none', position:'absolute', top:'-4rem', fontSize:'160%', padding:'0 0 2rem 4rem', textAlign:'left', width:'100%',}}>{companyname}<br />
 {/* {frontmatter.address.addressText}
 <br />
@@ -682,6 +683,7 @@ const YouTube = frontmatter.youtuber
             className=""
             dangerouslySetInnerHTML={{ __html: html }}
           />
+          
 </div>
 
   
@@ -690,10 +692,15 @@ const YouTube = frontmatter.youtuber
 
 
 
-
-
+ <div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px dotted #666', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', padding:'1rem 0', }}>
+<div className="keyboard" order="1" style={{display:'flex', justifyContent:'', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> OR <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
+<div order="2" className="themer" style={{display:'flex', justifyContent:'center', border:'0px solid red', minWidth:'400px', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important',}} /></span></div>
+  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'30px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
+  </div>
 
 </section>
+
+
 ) : (
   ""
 )}
@@ -707,53 +714,11 @@ const YouTube = frontmatter.youtuber
 
 
 
-  
-
-
-  
-  
-
-
- <div order="1" id="installedbar" className="toolbar hasapp print" style={{display:'none', flexDirection:'', gap:'', width:'', borderTop:'1px dotted #666', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', padding:'1rem 0', }}>
-
- <div order="2" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
- <Link state={{modal: true}} to="/cover/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Cover Letter</Link>
- </div>
-
- <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
- <Link state={{modal: true}} to="/posts/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Portfolio</Link>
- </div>
-
- <div className="themer" order="4" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important'}} /></span></div>
  
-  <div order="5" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-  <Link state={{modal: true}} to="/notes/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Notes</Link>
-  </div>
 
 
- <div order="6" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-  <Link state={{modal: true}} to="/login/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Admin</Link>
-  </div>
-
- {/* <div order="7" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-  <Link state={{modal: true}} to="/tips/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Tips</Link>
-  </div> */}
-
-
- </div>
-
-
- <div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px dotted #666', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', padding:'1rem 0', }}>
-
-
-<div className="keyboard" order="1" style={{display:'flex', justifyContent:'', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> OR <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
-
-
-<div order="2" className="themer" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important'}} /></span></div>
-
-  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'30px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
-
-</div>
+  
+  
       {/* show footer */}
 {showfooter ? (
 
@@ -767,6 +732,33 @@ const YouTube = frontmatter.youtuber
 {/* end show footer */}
 
 
+<div order="1" id="installedbar" className="toolbar hasapp print" style={{position:'', bottom:'0', width:'100%', display:'flex', flexDirection:'', gap:'', borderTop:'1px dotted #666', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', marginTop:'10vh', padding:'1rem 0', zIndex:'5' }}>
+
+<div order="2" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+<Link state={{modal: true}} to="/cover/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Cover Letter</Link>
+</div>
+
+<div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+<Link state={{modal: true}} to="/posts/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Portfolio</Link>
+</div>
+
+<div className="themer" order="4" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important'}} /></span></div>
+
+ <div order="5" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+ <Link state={{modal: true}} to="/notes/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Notes</Link>
+ </div>
+
+
+<div order="6" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+ <Link state={{modal: true}} to="/login/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Admin</Link>
+ </div>
+
+{/* <div order="7" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+ <Link state={{modal: true}} to="/tips/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Tips</Link>
+ </div> */}
+
+
+</div>
 
     </Layout>
     </CustomBox>
