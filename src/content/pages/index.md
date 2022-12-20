@@ -7,7 +7,7 @@ secondaryImage: /assets/deighleen.webp
 portfolio:
   openText: ""
   closeText: ""
-underlayImage: null
+underlayImage: /assets/butterfly-background.webp
 showInfo: "1"
 showPosts: false
 showSocial: true

@@ -16,7 +16,7 @@ const PostCard = ({ data }) => (
 
   <article
     className="post-card"
-    style={{display:'', alignItems:'center', justifyContent:'center', width:'100%', height:'', position:'relative', fontSize:'clamp(1rem, 1.2vw, 3rem)' }}
+    style={{display:'', alignItems:'center', justifyContent:'center', width:'100%', height:'', position:'relative', fontSize:'clamp(1rem, 1.2vw, 3rem)', background:'transparent', border:'0', }}
   >
 
 
@@ -25,12 +25,12 @@ const PostCard = ({ data }) => (
 
 
     {data.frontmatter.featuredImage ? (
-      <Link to={data.frontmatter.slug}>
+      <Link state={{modal: true}} to={data.frontmatter.slug}>
         <GatsbyImage
           image={data.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
           alt={data.frontmatter.title + " - Featured image"}
           className="featured-image"
-          style={{position:'relative', zIndex:'1'}}
+          style={{position:'relative', zIndex:'1', }}
         />
         <div
               style={{
@@ -68,11 +68,11 @@ const PostCard = ({ data }) => (
       </Link>
       
     ) : (
-      <Link  to={data.frontmatter.slug}><StaticImage className="featured-image" src="../../static/assets/default-og-image.jpg" alt="VidSock Default Image" style={{position:'relative', zIndex:''}} /></Link>
+      <Link state={{modal: true}}  to={data.frontmatter.slug}><StaticImage className="featured-image" src="../../static/assets/default-og-image.jpg" alt="VidSock Default Image" style={{position:'relative', zIndex:''}} /></Link>
     )}
 
 
-<div className="post-content" >
+<div className="post-content" style={{textAlign:'center'}} >
 
 
 

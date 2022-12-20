@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getSrc } from "gatsby-plugin-image"
-import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
+// import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 import CommentBox from "../components/commentbox"
 // import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
@@ -36,8 +36,8 @@ const Pagination = props => (
     <ul>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
         <li>
-          <Link to= {props.previous.frontmatter.slug + "/"} rel="prev">
-            <p
+      <Link state={{modal: true}} to={props.previous.frontmatter.slug + "/"} rel="prev">
+            {/* <p
               style={{
                 color: "inherit",
               }}
@@ -45,28 +45,31 @@ const Pagination = props => (
               <span className="icon -left">
                 <RiArrowLeftLine />
               </span>{" "}
-              Previous
-            </p>
-            {/* <span className="page-title">
+              
+            </p> */}
+            <span className="page-title">
               {props.previous.frontmatter.title}
-            </span> */}
+            </span>
           </Link>
         </li>
       )}
+       <Link title="Go Back" className="navbar-item txtshadow" to="/">
+Go Back
+</Link>
       {props.next && props.next.frontmatter.template === "blog-post" && (
         <li>
-          <Link to={props.next.frontmatter.slug + "/"} rel="next">
-            <p
+          <Link state={{modal: true}} to={props.next.frontmatter.slug + "/"} rel="next">
+            {/* <p
               style={{
                 color: "inherit",
               }}
             >
-              Next{" "}
+              {" "}
               <span className="icon -right">
                 <RiArrowRightLine />
               </span>
-            </p>
-            {/* <span className="page-title">{props.next.frontmatter.title}</span> */}
+            </p> */}
+            <span className="page-title">{props.next.frontmatter.title}</span>
           </Link>
         </li>
       )}
@@ -233,8 +236,8 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
             <div className="" style={{ textAlign:'center', animation:'fadeIn 3s'}}>
               
     
-              <div style={{position:'relative', maxWidth:'100vw', margin:'10% 0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important',}}>
-      <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', maxHeight:'200px', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+              <div style={{position:'relative', maxWidth:'30vw', margin:'10% 0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+      <img className="homepage-bg" src={iconimage} width="300px" height="150px" alt="VidSock" style={{ width:'100%', maxHeight:'200px', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important', display:'none'}} />
     </div>
           
               <span style={{fontWeight:'bold', padding:'0 0 0 0', fontSize:'2rem'}}>Click To Play</span>
@@ -277,23 +280,48 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
               playing
               playsinline
               playIcon={
-                <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100%', height:'100%', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItem:'center', paddingTop:''}}>
+                <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100%', height:'100%', background:'transparent', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'', justifyContent:'center', alignItem:'', paddingTop:''}}>
     
-            <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', width:'', margin:'0 auto'}}>
+            {/* <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', width:'', margin:'0 auto'}}> */}
               
+
+            {Image ? (
+            <GatsbyImage
+            image={Image}
+            alt={frontmatter.title + " - Featured image"}
+            className="featured-image1 layer1 homepage-bg1"
+            style={{width:'100vw', height:'100vh',maxHeight:'100vh', position:'absolute', top:'', zIndex:'', objectFit:'cover', overflow:'hidden', border:'0px solid red !important'}}
+          />
+          ) : (
+
+ ""
+       
+               )}
+
+               
+            <div style={{display:'flex', flexDirection:'', placeContent:'center', placeSelf:'center', justifyContent:'center', alignContent:'center', alignItem:'center', verticalAlign:'center', height:'', margin:'0 auto 0 auto', width:'100%', border:'0px solid yellow'}}>
+                <div style={{ background:'rgba(0,0,0,0.30)', fontWeight:'bold', padding:'0 1rem', margin:'0 auto', fontSize:'clamp(1.2rem, 2.8vw, 3.4rem)',  borderRadius:'12px', border:'1px solid #333', filter:'drop-shadow(2px 2px 2px #000)', }}>Play <ImPlay style={{margin:'0 auto', width:'100px', fontSize:'60px'}} /></div>
+                
+            </div>
+
+            
     
-              <div style={{position:'relative', maxWidth:'', margin:'0 0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+              {/* <div style={{position:'relative', maxWidth:'', margin:'0 0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important', minHeight:'', border:'2px solid red !important'}}> */}
 
               {/* <object className="" id="vidsock-logo" data={iconimage} type="image/svg+xml" style={{ overflow:'hidden', border:'0px solid red', zIndex:'0', width:'30vw', maxWidth:'', height:'auto', background:'transparent'  }} alt="animated content" title="animated content" >You need a new browser</object> */}
 
 
-      <img className="homepage-bg1" src={iconimage} width="" height="" alt="MyResume" style={{ width:'', height:'', maxHeight:'30vh',  background:'transparent !important',}} />
-      <br /><br />
-    </div>
+      {/* <img className="homepage-bg1" src={iconimage} width="" height="" alt="MyResume" style={{ width:'', height:'', maxHeight:'45vh',  background:'transparent !important',}} /> */}
+
+
+      
+{/* 
+    </div> */}
           
-              <div style={{width:'', margin:'2rem auto 0 auto', fontWeight:'bold', padding:'0 1rem', fontSize:'2rem',  borderRadius:'12px', border:'1px solid #333',filter:'drop-shadow(2px 2px 2px #000)'}}><span style={{filter:'drop-shadow(2px 2px 2px #000)'}}>Click To Play</span></div>
-      {/* <ImPlay style={{margin:'0 auto', width:'50%', fontSize:'60px'}} /> */}
-              </div>
+              
+  
+              {/* </div> */}
+              
               </button>}
                 light="../assets/transparent.png"
               />
@@ -326,7 +354,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
             },
           }}
           playIcon={
-            <button aria-label="Click To Play" className="clickplay" style={{position:'relative', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'#111', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', paddingTop:'0', borderRadius:'12px'}}>
+            <button aria-label="Click To Play" className="clickplay" style={{position:'relative', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'transparent', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', paddingTop:'0', borderRadius:'12px'}}>
               
       
       
@@ -369,7 +397,7 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           // ]}
           width="100%"
           height=""
-          style={{marginTop:'80px', position:'relative'}}
+          style={{marginTop:'0px', position:'relative'}}
           config={{
             youtube: {
               playerVars: { showinfo:0, autoplay:1, controls:0, start:AudioStart, end:AudioEnd, mute:0,  }
@@ -381,12 +409,12 @@ const iframeUrl = "https://www.youtube.com/embed/" + frontmatter.youtuber + ""
           playIcon={
             <button aria-label="Click To Play" className="clickplays" style={{position:'relative', zIndex:'0', top:'', border:'0px  solid red', width:'100vw', height:'', background:'transparent', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', paddingTop:'0', borderRadius:'12px'}}>
           
-        <div className="" style={{position:'absolute', top:'-70px', zIndex:'0', textAlign:'center', animation:'fadeIn 3s', display:'flex', justifyContent:'center', width:'auto', marginBottom:''}}>
+        <div className="" style={{position:'absolute', top:'-40px', zIndex:'0', textAlign:'center', animation:'fadeIn 3s', display:'flex', justifyContent:'center', width:'auto', marginBottom:''}}>
           
       
           {/* <div className="" style={{fontSize:'14px', fontWeight:'', padding:'0 0 0 .3rem',}}>Click For Audio</div> */}
 
-          <div className="popped" style={{display:'flex', width:'', margin:'0 auto', fontWeight:'bold', padding:'.5rem', fontSize:'2rem', background:'linear-gradient(180deg, #777 30%, #333 80%)', borderRadius:'12px', border:'1px solid #333', filter:'drop-shadow(2px 2px 2px #000)'}}><AiOutlineAudioMuted style={{margin:'0 auto', fontSize:'20px', filter:'drop-shadow(2px 2px 2px #000)'}} /><div style={{fontSize:'14px', fontWeight:'', padding:'0 0 0 .3rem', filter:'drop-shadow(2px 2px 2px #000)'}}>Click For Audio</div></div>
+          <div className="popped" style={{display:'flex', width:'', margin:'0 auto', fontWeight:'bold', padding:'.2rem', fontSize:'2rem', background:'rgba(0,0,0,0.30)', borderRadius:'12px', border:'1px solid #333', filter:'drop-shadow(2px 2px 2px #000)'}}><AiOutlineAudioMuted style={{margin:'0 auto', fontSize:'20px', filter:'drop-shadow(2px 2px 2px #000)'}} /><div style={{fontSize:'14px', fontWeight:'', padding:'0 0 0 .3rem', filter:'drop-shadow(2px 2px 2px #000)'}}>Audio</div></div>
           
           </div>
           </button>}
@@ -603,23 +631,26 @@ const { iconimage } = useSiteMetadata()
 
 
 <article className="blog-post">
-        <header>
+        
+
+
+
+
+  
+
+
+      {/* <span className="mobile"><GoBack /></span> */}
+      <header>
           <section className="article-header" style={{textAlign:'center', margin:'0 4%', height:'auto', color:''}}>
+          
             <h1>{frontmatter.title}</h1>
             {/* <time sx={{color: "muted"}}>{frontmatter.date}</time> */}
             {/* <TimeAgo date={frontmatter.date} style={{color:'#fff !important'}} /> */}
           </section>
         </header>
-
-
-
-
-        <div style={{display:'flex', justifyContent:'center', color:'#ccc'}}><Link title="Go Back" className="navbar-item txtshadow" to="/">
-Go Back
-</Link></div>
-
-
-      {/* <span className="mobile"><GoBack /></span> */}
+        <div style={{padding:'0 5vw', color:'inherit !important'}}>
+      {(previous || next) && <Pagination {...props} />}
+      </div>
  <br />
 
 
@@ -829,9 +860,9 @@ Go Back
    <br />
    {/* <GoBack /> */}
 
-   <div style={{display:'flex', justifyContent:'center', color:'#ccc'}}><Link title="Go Back" className="navbar-item txtshadow " to="/">
+   {/* <div style={{display:'flex', justifyContent:'center', color:'#ccc'}}><Link title="Go Back" className="navbar-item txtshadow " to="/">
 Go Back
-</Link></div>
+</Link></div> */}
 
 
 

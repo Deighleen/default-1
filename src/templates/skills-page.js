@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
-import GoBack from "../components/goBack"
+// import GoBack from "../components/goBack"
 import { Footer } from "../components/footer"
 export const skillspageQuery = graphql`
   query skillsQuery($id: String!) {
@@ -26,10 +26,10 @@ const Skills = ({ data }) => {
       <Seo title={frontmatter.title} description={excerpt} />
 
 
-      <div className="container" style={{padding:'2rem 8%', maxWidth:'1024px'}}>
+      <div className="container" style={{padding:'2rem 0', maxWidth:'1024px'}}>
 
 
-      <div className="mobile"><GoBack /></div>
+      {/* <div className="mobile"><GoBack /></div> */}
 
 
       <dl>

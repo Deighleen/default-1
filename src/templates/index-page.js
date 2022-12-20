@@ -241,7 +241,7 @@ const YouTube = frontmatter.youtuber
   style={{zIndex:'3'}}
       config={{
         youtube: {
-          playerVars: { showinfo:1, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
+          playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
         },
       }}
       loop
@@ -351,38 +351,30 @@ const YouTube = frontmatter.youtuber
 <section id="info" name="info" style={{ display:'', height:'', position:'', zIndex:'2', overflow:'',}}>
   <article>
 
-  <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'', alignItems:"center", padding:'0 4%'}}>
-
 
   {UnderlayImage ? (
             <GatsbyImage
             image={UnderlayImage}
             alt={frontmatter.title + " - image"}
-            className="mcboaty"
-            style={{width:'100vw', height:'90vh', overflow:'hidden', maxHeight:'', position:'absolute', left:'0', top:'', zIndex:'-1', objectFit:'cover', opacity:'.8', border:'0px solid red !important'}}
+            className="mcboaty print"
+            placeholder="blurred" loading="eager"
+              layout="constrained"
+              style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'0', objectFit:'cover', overflow:'', border:'0px solid red !important'}}
           />
        
           ) : (
             ""
           )}
+             
+  <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'center', alignItems:"center", padding:'0 4%'}}>
+
+
+
 
 
 
           
-{/* 
-<div class="" style="position:relative; z-index:0; min-width:; height:100%; padding:4vh 1rem 1rem 3rem; font-size:clamp(.7rem, 3vw, 3.2rem); left:0;, top:4vh; line-height:100%; text-shadow:0 2px 7px #000; background:rgba(0,0,0,0.50); border-radius:12px; border:0px solid yellow;">
-  <p>You will receive an identity disk.</p>
-  <p>Everything you do or learn</p>
-  <p>will be imprinted on this disk.</p>
-  <br>
-  <p>If you lose your disk or fail to</p>
-  <p>follow commands, you will be</p>
-  <p>subject to immediate de-resolution.</p>
-  <br>
-  <p>Mirroring complete. Disk Activated.</p>
-  <br>
-  <p class="TRON txtshadow tronText actionJackson" style="cursor:pointer; margin:0 auto; padding: 0; text-decoration:none; text-shadow:3px 3px 6px rgb(0, 162, 184); font-size:80%;"><a href="/lightdisc-grid/" style="position:relative;">Proceed to games.</a></p>
-</div> */}
+
 
       
 
@@ -390,14 +382,14 @@ const YouTube = frontmatter.youtuber
 {UnderlayImage ? (
   
 
-  <div className="flexcheek mob print" style={{padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.4vw, 3.2rem)', textShadow:'0 2px 7px #000', background:'rgba(0,0,0,0.70)', color:'#fff', borderRadius:'10px'}}>
+  <div className="flexcheek mob print" style={{marginTop:'', padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.4vw, 3.2rem)', textShadow:'0 2px 3px #000', background:'rgba(0,0,0,0.50)', color:'#fff', borderRadius:'10px'}}>
   
   <h1 className="title1">{frontmatter.title}</h1>
             <h2 className="tagline1">
               {frontmatter.tagline}
             </h2>
             <div
-            style={{}}
+            style={{paddingBottom:'2rem'}}
               className="description"
               dangerouslySetInnerHTML={{ __html: ProfText }}
             />
@@ -429,7 +421,10 @@ const YouTube = frontmatter.youtuber
         
 
 
-      <div className="flexcheek mob2 print" style={{position:'', maxHeight:'', overflow:'', marginBottom:'', paddingTop:'5vh', }}>
+      <div className="flexcheek mob2 print" style={{position:'', maxHeight:'', overflow:'', marginBottom:'', paddingTop:'0vh',background:'rgba(0,0,0,0.50)', borderRadius:'0 0 10px 10px',  textShadow:'0 2px 7px #000', }}>
+
+
+
 
 
            {SecondaryImage ? (
@@ -446,9 +441,16 @@ const YouTube = frontmatter.youtuber
 
 
 
+
+
+
+
+
+
+
 {UnderlayImage ? (
 
-  <div className="nameblock" style={{margin:'20px auto 0 auto', padding:'0 0 10px 0',alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center', color:'#fff', border:'0px solid red', maxWidth:'80%', paddingTop:'1rem', background:'rgba(0,0,0,0.50)', borderRadius:'10px', textShadow:'0 2px 7px #000', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}} >
+  <div className="nameblock" style={{margin:'20px auto 0 auto', padding:'0 0 10px 0',alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center', color:'#fff', border:'0px solid red', maxWidth:'80%', paddingTop:'1rem',  fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}} >
 <span style={{color:'', fontSize:'160%'}}>{companyname}</span>
 {frontmatter.addressText}
 <br />
@@ -730,7 +732,7 @@ const YouTube = frontmatter.youtuber
 
 
  <div order="6" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-  <Link state={{modal: true}} to="/admin/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Admin</Link>
+  <Link state={{modal: true}} to="/login/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Admin</Link>
   </div>
 
  {/* <div order="7" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
