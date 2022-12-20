@@ -67,6 +67,7 @@ export const pageQuery = graphql`
         showResume
         showSocial
         showSkills
+        showCover
         youtuber
         youtubestart
         youtubeend
@@ -179,6 +180,7 @@ const HomePage = ({ data }) => {
     const ShowResume = frontmatter.showResume
     const showSocial = frontmatter.showSocial
     const showSkills = frontmatter.showSkills
+    const ShowCover = frontmatter.showCover
     const showfooter = useSiteMetadata()
     // const showCTA = frontmatter.cta.ctaText
     const CtaLink = frontmatter.cta.ctaLink
@@ -466,7 +468,15 @@ const YouTube = frontmatter.youtuber
           )}
 
 <br />
-<Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>View cover letter</Link>
+
+
+{ShowCover ? (
+  <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>View cover letter</Link>
+) : (
+  ""
+)}
+
+
 <br />
 
 
@@ -516,22 +526,33 @@ const YouTube = frontmatter.youtuber
 <br />
 
 
-{/* {coverText ? (
+{/* {ShowCover ? (
 ""
 ) : (
   ""
 )} */}
 
 
+
+
+{ShowCover ? (
+<>
 {coverLink ? (
 
-          <a href={frontmatter.coverletter.coverLink} rel="noreferrer" target="_blank" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</a>
-       
-          ) : (
-            
-            <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</Link>
+<a href={frontmatter.coverletter.coverLink} rel="noreferrer" target="_blank" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</a>
+
+) : (
+  
+  <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</Link>
 
 )}
+</>
+) : (
+  <strong>No Cover Letter</strong>
+)}
+
+
+
 
 
 
@@ -664,7 +685,7 @@ const YouTube = frontmatter.youtuber
  
 
 
-<section  style={{ display:'', height:'', overflow:'', margin:'', position:'relative'}}>
+<section  style={{ display:'', height:'', overflow:'', margin:'10vh 0 0 0', position:'relative'}}>
 
 
 
@@ -732,7 +753,7 @@ const YouTube = frontmatter.youtuber
 {/* end show footer */}
 
 
-<div order="1" id="installedbar" className="toolbar hasapp print" style={{position:'', bottom:'0', width:'100%', display:'flex', flexDirection:'', gap:'', borderTop:'1px dotted #666', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', marginTop:'10vh', padding:'1rem 0', zIndex:'5' }}>
+<div order="1" id="installedbar" className="toolbar hasapp print" style={{position:'relative', bottom:'0', width:'100%', display:'none', flexDirection:'', gap:'', borderTop:'1px dotted #666', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', marginTop:'10vh', padding:'1rem 0', zIndex:'5', }}>
 
 <div order="2" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
 <Link state={{modal: true}} to="/cover/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Cover Letter</Link>

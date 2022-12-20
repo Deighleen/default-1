@@ -11,7 +11,7 @@ underlayImage: /assets/butterfly-background.webp
 showInfo: "1"
 showPosts: false
 showSocial: true
-showResume: true
+showResume: false
 showSkills: false
 showCover: false
 youtuber: ""
