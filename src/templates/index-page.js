@@ -350,8 +350,8 @@ const YouTube = frontmatter.youtuber
  {/* show Info */}
  {ShowInfo ? (
 
-<section id="info" name="info" style={{ display:'', height:'', position:'', zIndex:'2', overflow:'',}}>
-  <article>
+<section id="info" name="info" style={{ display:'', height:'100vh', position:'', zIndex:'2', overflow:'',}}>
+  <article style={{ margin:'0'}}>
 
 
   {UnderlayImage ? (
@@ -367,24 +367,31 @@ const YouTube = frontmatter.youtuber
           ) : (
             ""
           )}
+
+
+{/* {UnderlayImage ? (
+""
+) : (
+  ""
+)} */}
              
-  <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'center', alignItems:"center", padding:'0 4%'}}>
+             <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'center', alignItems:"", margin:'0 4%',
+  padding:'2% 4% 0 4%',
+  // textShadow:'0 2px 3px #000',
+  //  background:'rgba(0,0,0,0.70)',
+  //  color:'#fff', 
+   borderRadius:'0 0 10px 10px',}}>
 
 
 
-
-
-
-          
-
-
-      
 
 
 {UnderlayImage ? (
-  
+  // custom image in effect //
 
-  <div className="flexcheek mob print" style={{marginTop:'', padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.4vw, 3.2rem)', textShadow:'0 2px 3px #000', background:'rgba(0,0,0,0.50)', color:'#fff', borderRadius:'10px'}}>
+  <div className="flexcheek mob print" style={{marginTop:'', padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.4vw, 3.2rem)', textShadow:'0 2px 3px #000', color:'#fff', 
+  background:'rgba(0,0,0,0.50)', 
+  borderRadius:'10px'}}>
   
   <h1 className="title1">{frontmatter.title}</h1>
             <h2 className="tagline1">
@@ -411,9 +418,6 @@ const YouTube = frontmatter.youtuber
               className="description"
               dangerouslySetInnerHTML={{ __html: ProfText }}
             />
-
-            
-           
             </div>
 
 
@@ -423,7 +427,9 @@ const YouTube = frontmatter.youtuber
         
 
 
-      <div className="flexcheek mob2 print" style={{position:'', maxHeight:'', overflow:'', marginBottom:'', paddingTop:'0vh',background:'rgba(0,0,0,0.50)', borderRadius:'0 0 10px 10px',  textShadow:'0 2px 7px #000', }}>
+      <div className="flexcheek mob2 print" style={{position:'', maxHeight:'', overflow:'', marginBottom:'', paddingTop:'0vh', borderRadius:'0 0 10px 10px',
+      // textShadow:'0 2px 7px #000', 
+      }}>
 
 
 
@@ -434,7 +440,7 @@ const YouTube = frontmatter.youtuber
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
               className="drop-shadow avatar-frame"
-              style={{ maxWidth:'', height:'', maxHeight:'40vh', position:'relative',  top:'', objectFit:'contain', backgroundSize:'contain', zIndex:''}}
+              style={{ maxWidth:'', height:'', maxHeight:'35vh', position:'relative',  top:'', objectFit:'contain', backgroundSize:'contain', zIndex:''}}
             />
           ) : (
             ""
@@ -452,49 +458,50 @@ const YouTube = frontmatter.youtuber
 
 {UnderlayImage ? (
 
-  <div className="nameblock" style={{margin:'20px auto 0 auto', padding:'0 0 10px 0',alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center', color:'#fff', border:'0px solid red', maxWidth:'80%', paddingTop:'1rem',  fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}} >
+  <div className="nameblock" style={{margin:'20px auto 0 auto', padding:'0 0 10px 0',alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center',
+  color:'#fff',
+  border:'0px solid red', 
+  maxWidth:'80%', paddingTop:'1rem', 
+  fontSize:'clamp(1rem, 1.4vw, 3.2rem)',
+  background:'rgba(0,0,0,0.50)',
+  borderRadius:'10px',
+  textShadow:'0 2px 7px #000',
+  }} >
+
 <span style={{color:'', fontSize:'160%'}}>{companyname}</span>
 {frontmatter.addressText}
 <br />
 {frontmatter.addressText2}
-<br /><br />
+<br />
 <Link state={{modal: true}} to="/contact/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', maxWidth:'600px', paddingLeft:'3rem', paddingRight:'3rem' }}>Contact Me</Link>
 
 {showSocial ? (
            <Social />
-       
           ) : (
             ""
           )}
-
 <br />
-
-
 {ShowCover ? (
   <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>View cover letter</Link>
 ) : (
   ""
 )}
-
-
 <br />
+</div> // end nameblock
 
 
-</div>
 
 ) : (
+
+
   
   <div className="nameblock" style={{margin:'0 auto 0 auto', alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center', border:'0px solid red', maxWidth:'80%', paddingTop:'1rem', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}} >
 <span style={{color:'', fontSize:'160%'}}>{companyname}</span>
 {frontmatter.addressText}
 <br />
 {frontmatter.addressText2}
-<br /><br />
-
-
-
+<br />
 {CtaLink ? (
-           
            <a
    href={frontmatter.cta.ctaLink}
    className="button print"
@@ -511,10 +518,10 @@ const YouTube = frontmatter.youtuber
     color:''
     }}>{frontmatter.cta.ctaText}
 </a>
-       
           ) : (
             <Link state={{modal: true}} to="/contact/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', borderRadius:'8px', maxWidth:'600px', padding:'1rem'}}>{frontmatter.cta.ctaText}</Link>
           )}
+
 
 {showSocial ? (
            <Social />
@@ -522,9 +529,7 @@ const YouTube = frontmatter.youtuber
           ) : (
             ""
           )}
-
 <br />
-
 
 {/* {ShowCover ? (
 ""
@@ -532,64 +537,30 @@ const YouTube = frontmatter.youtuber
   ""
 )} */}
 
+{coverLink || ShowCover? (
 
-
-
-{ShowCover ? (
-<>
-{coverLink ? (
-
-<a href={frontmatter.coverletter.coverLink} rel="noreferrer" target="_blank" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</a>
+<Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</Link>
 
 ) : (
   
-  <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</Link>
+<a href={frontmatter.coverletter.coverLink} rel="noreferrer" target="_blank" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</a>
 
 )}
-</>
-) : (
-  <strong>No Cover Letter</strong>
+
+</div> // end nameblock
+
+      // custom image in effect //
 )}
-
-
-
-
-
-
-
-<br />
-
-
 
 
 
 
 
 </div>
-
-    
-)}
-
-
-
-
-</div>
-
 </div> 
-
-
-      
-
-
 
 </article>
 </section>
-
-
-
-
-
-
 
 ) : (
   ""
@@ -598,10 +569,22 @@ const YouTube = frontmatter.youtuber
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 {/* end show Posts */}
 {ShowPosts ? (
 
-<div id="posts" name="posts">
+<div id="posts" name="posts" style={{marginTop:'10vh'}}>
 
 
 <div className="sliderholder" style={{display:'flex', justifyContent:'center', width:'100%', height:'60vh', overflow:'hidden', position:'relative',}}>
