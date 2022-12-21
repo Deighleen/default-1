@@ -5,7 +5,7 @@ const theme = {
   colors: {
     ...defaultColors,
     text: "rgb(45, 47, 48) ",
-    background: "rgba(232, 230, 227, 0.7)",
+    background: "--theme-ui-colors-siteColor",
     primary: "var(--primary)",
     accent: "#fff",
     muted: "rgba(0, 0, 0, 0.7)",

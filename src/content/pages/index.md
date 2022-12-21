@@ -7,12 +7,12 @@ secondaryImage: /assets/deighleen.webp
 portfolio:
   openText: ""
   closeText: ""
-underlayImage: 
+underlayImage: /assets/butterfly-background.webp
 showInfo: "1"
 showPosts: false
 showSocial: true
-showResume: true
-showSkills: true
+showResume: false
+showSkills: false
 showCover: false
 youtuber: ""
 profTitle: Business Management & Marketing

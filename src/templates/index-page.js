@@ -365,8 +365,8 @@ const YouTube = frontmatter.youtuber
  {/* show Info */}
  {ShowInfo ? (
 
-<section id="info" name="info" style={{ display:'', minHeight:'100vh', height:'100vh', position:'', zIndex:'2', overflow:'', border:'0px solid red'}}>
-  <article style={{ margin:'0'}}>
+<section id="info" name="info" style={{ display:'', minHeight:'', height:'', position:'', zIndex:'2', overflow:'', border:'0px solid red'}}>
+  <article style={{ margin:'0 0 10vh 0'}}>
 
 
 
@@ -561,7 +561,7 @@ const YouTube = frontmatter.youtuber
 
 </div>
 </div> 
-
+{/* <div style={{height:'100px', border:'1px solid red'}}>&nbsp;</div> */}
 </article>
 </section>
 
@@ -701,8 +701,8 @@ const YouTube = frontmatter.youtuber
 
  <div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px dotted #666', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', padding:'5px 0 0 0', }}>
 <div className="keyboard" order="1" style={{display:'flex', justifyContent:'', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> OR <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
-<div order="2" className="themer" style={{display:'flex', justifyContent:'center', border:'0px solid red', minWidth:'400px', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important',}} /></span></div>
-  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'30px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
+{/* <div order="2" className="themer" style={{display:'flex', justifyContent:'center', border:'0px solid red', minWidth:'400px', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important',}} /></span></div> */}
+  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'auto !important', margin:'0 auto'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'30px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
   </div>
 
 </section>
@@ -726,20 +726,31 @@ const YouTube = frontmatter.youtuber
 
   
   
-      {/* show footer */}
-{showfooter ? (
 
 
-<Footer />
+
+<div id="installedbar" className="toolbar print hasapp" style={{position:'relative', bottom:'', width:'100vw', display:'none', flexDirection:'', gap:'', borderTop:'0px solid #555', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', marginTop:'', padding:'2rem 0 3rem 0', zIndex:'', }}>
 
 
+<div className="" order="1" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+ <Link state={{modal: true}} to="/login/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Admin</Link>
+ </div>
+
+
+ <div className="" order="5" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+ <Link state={{modal: true}} to="/notes/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Notes</Link>
+ </div>
+
+
+
+ {ShowPosts ? (
+  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
+<Link state={{modal: true}} to="/posts/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Portfolio</Link>
+</div>
 ) : (
   ""
 )}
-{/* end show footer */}
 
-
-<div order="1" id="installedbar" className="toolbar print" style={{position:'relative', bottom:'0', width:'100%', display:'flex', flexDirection:'', gap:'', borderTop:'0px solid #555', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', marginTop:'', padding:'1rem 0', zIndex:'', }}>
 
 {/* {ShowResume ? (
   <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
@@ -758,13 +769,7 @@ const YouTube = frontmatter.youtuber
 )}
 
 
-{ShowPosts ? (
-  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-<Link state={{modal: true}} to="/posts/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Portfolio</Link>
-</div>
-) : (
-  ""
-)}
+
 
 
 
@@ -782,21 +787,28 @@ const YouTube = frontmatter.youtuber
  <Link state={{modal: true}} to="/tips/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Tips</Link>
  </div> */}
 
- <div className="hasapp" order="5" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
- <Link state={{modal: true}} to="/notes/" className="button print has-app" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Notes</Link>
- </div>
-
-
-<div order="6" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
- <Link state={{modal: true}} to="/login/" className="button print has-app" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Admin</Link>
- </div>
-
- {/* <div className="themer" order="4" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important'}} /></span></div> */}
-
-
-
-
 </div>
+
+
+
+<div className="usability" style={{position:'relative', zIndex:'2', bottom:'20px', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'0 auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'0px solid blue', textAlign:'center'}}>
+<Theme />
+</div>
+
+
+{/* show footer */}
+{showfooter ? (
+
+
+<Footer />
+
+
+) : (
+  ""
+)}
+{/* end show footer */}
+
+
 
     </Layout>
     </CustomBox>
