@@ -345,20 +345,20 @@ const YouTube = frontmatter.youtuber
 
 
 
-
+<div className="no-app" style={{maxHeight:'100vh', height:'100vh', overflow:'hidden',position:'absolute', top:'', zIndex:'-1',}}>
 {UnderlayImage ? (
             <GatsbyImage
             image={UnderlayImage}
             alt={frontmatter.title + " - image"}
             className="mcboaty print"
             placeholder="blurred" loading="eager"
-              style={{height:'auto', width:'100vw', maxHeight:'', position:'absolute', top:'', zIndex:'-1', objectFit:'cover', overflow:'', border:'0px solid red !important'}}
+              style={{height:'auto', width:'100vw', maxHeight:'',  objectFit:'cover', overflow:'', border:'0px solid red !important'}}
           />
        
           ) : (
             ""
           )}
-
+</div>
 
 
 
@@ -378,7 +378,7 @@ const YouTube = frontmatter.youtuber
   ""
 )} */}
              
-             <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'center', alignItems:"", margin:'0 4%',
+             <div id="" className="flexbutt" style={{display:'flex', gap:'30px', justifyContent:'center', alignItems:"center", margin:'0 4%',
   padding:'2% 4% 0 4%',
   // textShadow:'0 2px 3px #000',
   //  background:'rgba(0,0,0,0.70)',
@@ -392,8 +392,9 @@ const YouTube = frontmatter.youtuber
 {UnderlayImage ? (
   // custom image in effect //
 
-  <div className="flexcheek mob print" style={{marginTop:'', padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.4vw, 3.2rem)', textShadow:'0 2px 3px #000', color:'#fff', 
+  <div className="flexcheek mob print nameblock" style={{marginTop:'', padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.4vw, 3.2rem)', textShadow:'0 2px 3px #000', color:'#fff', 
   background:'rgba(0,0,0,0.50)', 
+  backdropFilter:'blur(12px)',
   borderRadius:'10px'}}>
   
   <h1 className="title1">{frontmatter.title}</h1>
@@ -409,7 +410,7 @@ const YouTube = frontmatter.youtuber
   
             ) : (
           
-            <div className="flexcheek mob print" style={{padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.5vw, 3.2rem)',}}>
+            <div className="flexcheek mob print" style={{padding:'0', maxHeight:'', fontSize:'clamp(1rem, 1.5vw, 3.2rem)',}}>
   
               <h1 className="title1">{frontmatter.profTitle}</h1>
             <h2 className="tagline1">
@@ -467,6 +468,7 @@ const YouTube = frontmatter.youtuber
   maxWidth:'80%', paddingTop:'1rem', 
   fontSize:'clamp(1rem, 1.4vw, 3.2rem)',
   background:'rgba(0,0,0,0.50)',
+  backdropFilter:'blur(8px)',
   borderRadius:'10px',
   textShadow:'0 2px 7px #000',
   }} >
@@ -587,7 +589,7 @@ const YouTube = frontmatter.youtuber
 {/* end show Posts */}
 {ShowPosts ? (
 
-<div id="posts" name="posts" style={{marginTop:'10vh'}}>
+<div id="posts" name="posts" style={{margin:'20vh 0', background:'inherit'}}>
 
 
 <div className="sliderholder" style={{display:'flex', justifyContent:'center', width:'100%', height:'60vh', overflow:'hidden', position:'relative',}}>
@@ -655,7 +657,7 @@ const YouTube = frontmatter.youtuber
 
 
 {showSkills ? (
-           <Link state={{modal: true}} to="/skills/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'2rem auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center'}}>View Skills &amp; Capabilities</Link>
+           <Link state={{modal: true}} to="/skills/" className="button print no-app" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'2rem auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center'}}>View Skills &amp; Capabilities</Link>
        
           ) : (
             ""
@@ -699,7 +701,7 @@ const YouTube = frontmatter.youtuber
 
 
 
- <div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px dotted #666', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', padding:'5px 0 0 0', }}>
+ <div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px solid #777', borderBottom:'1px solid #777', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', padding:'5px 0 5px 0', }}>
 <div className="keyboard" order="1" style={{display:'flex', justifyContent:'', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> OR <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
 {/* <div order="2" className="themer" style={{display:'flex', justifyContent:'center', border:'0px solid red', minWidth:'400px', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important',}} /></span></div> */}
   <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'auto !important', margin:'0 auto'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'30px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
@@ -791,7 +793,7 @@ const YouTube = frontmatter.youtuber
 
 
 
-<div className="usability" style={{position:'relative', zIndex:'2', bottom:'20px', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'0 auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'0px solid blue', textAlign:'center'}}>
+<div className="usability" style={{position:'relative', zIndex:'2', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'0 auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'0px solid blue', textAlign:'center'}}>
 <Theme />
 </div>
 

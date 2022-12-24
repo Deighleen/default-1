@@ -6,7 +6,7 @@ import React, { } from "react"
 // import { FaRegPlusSquare } from 'react-icons/fa';
 // import { IoShareOutline } from 'react-icons/io5';
 // import { AiOutlineCloseCircle } from 'react-icons/ai';
-import Theme from "../components/theme"
+// import Theme from "../components/theme"
 import { Seo } from "./seo"
 import "../styles/reset.css"
 // import "../styles/variables.css"
