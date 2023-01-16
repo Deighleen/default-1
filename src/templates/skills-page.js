@@ -34,7 +34,7 @@ const Skills = ({ data }) => {
 
       <dl>
   <dt>
-  <h2>{frontmatter.title}</h2><span>100%</span>
+  <h2 style={{}}>{frontmatter.title}</h2><div>100%</div>
   </dt>
         <article dangerouslySetInnerHTML={{ __html: html }} />
         </dl>

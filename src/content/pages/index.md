@@ -8,24 +8,30 @@ portfolio:
   openText: ""
   closeText: ""
 underlayImage: /assets/butterfly-background.webp
-showInfo: "1"
-showPosts: false
-showSocial: true
-showResume: false
-showSkills: false
-showCover: false
-youtuber: ""
+youtuber: "RGT4V6JmINA"
+youtuber2: "RGT4V6JmINA"
+audiostart: "1"
+audioend: "5000"
+audiotitle: "The Cure - The Forest"
 profTitle: Business Management & Marketing
 profText: Deighleen has over 19 years of customer service including, retail sales, business sales, marketing, and multi-level management experience. I have served various positions of increasing responsibility. I have gained and enhanced my abilities to strive forward in leadership, decision-making, problem solving, and sales opportunities.
 addressText: Gulfport, MS
 addressText2: ""
+skillsTitle: "Mad Skills Yo!"
+skillsText: <dl>
+  <dd class="percentage percentage-90"><span class="text">Front End</span> <span class="percent">90%</span></dd>
+  <dd class="percentage percentage-65"><span class="text">Back End</span> <span class="percent">65%</span></dd>
+  <dd class="percentage percentage-85"><span class="text">WordPress</span> <span class="percent">85%</span></dd>
+  <dd class="percentage percentage-75"><span class="text">Javascript</span> <span class="percent">75%</span></dd>
+  <dd class="percentage percentage-80"><span class="text">UI Design</span> <span class="percent">80%</span></dd>
+  <dd class="percentage percentage-85"><span class="text">UX Design</span> <span class="percent">85%</span></dd>
+  </dl>
 youtubeautostart: "1"
 cta:
   ctaText: Contact Me
   ctaLink: ""
 svgImage: /assets/transparent.png
 youtubeend: ""
-showFeature: false
 shareable: ""
 youtubecontrols: "1"
 template: index-page

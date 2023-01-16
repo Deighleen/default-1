@@ -36,7 +36,7 @@ const Pagination = props => (
     <ul>
       {props.previous && props.previous.frontmatter.template === "blog-post" && (
         <li>
-      <Link state={{modal: true}} to={props.previous.frontmatter.slug + "/"} rel="prev">
+      <Link className="button" to={props.previous.frontmatter.slug + "/"} rel="prev">
             {/* <p
               style={{
                 color: "inherit",
@@ -53,12 +53,12 @@ const Pagination = props => (
           </Link>
         </li>
       )}
-       <Link title="Go Back" className="navbar-item txtshadow" to="/">
+       <Link title="Go Back" className="button " to="/#posts" style={{}}>
 Go Back
 </Link>
       {props.next && props.next.frontmatter.template === "blog-post" && (
         <li>
-          <Link state={{modal: true}} to={props.next.frontmatter.slug + "/"} rel="next">
+          <Link className="button" to={props.next.frontmatter.slug + "/"} rel="next">
             {/* <p
               style={{
                 color: "inherit",
@@ -97,7 +97,7 @@ const Post = ({ data, pageContext }) => {
     ? frontmatter.underlayImage.childImageSharp.gatsbyImageData
     : ""
 
-
+    const { showNav } = useSiteMetadata()
     const NftLink = frontmatter.nftlink
     const NftRedeem = frontmatter.nftredeem
     const NftDrop = frontmatter.nftdrop
@@ -481,6 +481,11 @@ const { iconimage } = useSiteMetadata()
 {/* <div className="video-background1" style={{position:'absolute', top:'0', right:'0', left:'0', zIndex:'0', height:'100vh', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}> */}
 
 
+{showNav ? (
+  <div style={{height:'38px'}} />
+) : (
+  ""
+)}
 
 <div className='player-wrapper' style={{position:'relative', top:'0', zIndex:'0', height:'100%', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
 
@@ -762,7 +767,7 @@ const { iconimage } = useSiteMetadata()
 <br />
  {ShowOriginal ? (
           <div style={{position:'relative', width:'100%', maxWidth:'800px', margin:'0 auto', textAlign:'center', display:'flex', flexDirection:'column', fontSize:'100%', borderRadius:'12px' }}>Click to view original video
-<div style={{maxWidth:'90vw', width:'100%', height:'440px', maxHeight:'40vh', padding:'0', position:'relative', bottom:'0', textAlign:'center', border:'0px solid blue', margin:'0 auto', borderRadius:'12px'}}>
+<div style={{maxWidth:'70vw', width:'100%', height:'440px', maxHeight:'40vh', padding:'0', position:'relative', bottom:'0', textAlign:'center', border:'0px solid blue', margin:'0 auto', borderRadius:'12px', background:'rgba(78, 74, 74, 0.3)'}}>
   
                     <Iframer2 />
                     
@@ -817,7 +822,7 @@ const { iconimage } = useSiteMetadata()
 
 
 {ShareThis ? (
-<div style={{width:'100%', padding:'0', margin:'0 auto'}}>
+<div style={{width:'100%', padding:'0', margin:'0 auto',display:'flex', justifyContent:'center',}}>
 
 
   
@@ -843,7 +848,7 @@ const { iconimage } = useSiteMetadata()
 
 
 {Comments ? (
-<div style={{width:'80%', padding:'0', margin:'0 auto'}}>
+<div style={{width:'80%', padding:'0', margin:'0 auto', display:'flex', justifyContent:'center',}}>
   
 <CommentBox />
     

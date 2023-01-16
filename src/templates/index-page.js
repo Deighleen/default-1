@@ -4,6 +4,7 @@ import { jsx } from "theme-ui"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getSrc } from "gatsby-plugin-image"
+import { AiOutlineAudioMuted } from "react-icons/ai"
 // import { RiArrowRightSLine } from "react-icons/ri"
 import { Footer } from "../components/footer"
 // import { GoArrowDown } from "react-icons/go"
@@ -17,7 +18,7 @@ import { Helmet } from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 import ReactPlayer from 'react-player/lazy'
-// import { ImPlay } from "react-icons/im"
+import { ImPlay } from "react-icons/im"
 
 import styled from "styled-components"
 import { Social } from "../components/social"
@@ -26,10 +27,15 @@ import { Social } from "../components/social"
 import BlogListHome from "../components/blog-list-home"
 import { Seo } from "../components/seo"
 import { Layout } from "../components/layout"
-// import Highlights from "../templates/highlights-page"
+
+
 
 
 const CustomBox = styled.div`
+
+.container21 section{
+  border:0px solid blue;
+}
 
 `
 
@@ -48,6 +54,14 @@ export const pageQuery = graphql`
         twitterUsername
         companyname
         showfooter
+        showInfo
+        showCover
+        showFeature
+        showPosts
+        showResume
+        showSocial
+        showSkills
+        showNav
         siteColor
       }
 
@@ -61,16 +75,13 @@ export const pageQuery = graphql`
         slug
         title
         description
-        showFeature
-        showPosts
-        showInfo
-        showResume
-        showSocial
-        showSkills
-        showCover
         youtuber
+        youtuber2
         youtubestart
         youtubeend
+        audiostart
+        audiotitle
+        audioend
         youtubemute
         youtubecontrols
         youtubeautostart
@@ -78,6 +89,8 @@ export const pageQuery = graphql`
         profText
         addressText
         addressText2
+        skillsTitle
+        skillsText
         svgzindex
         tagline
         featuredImage {
@@ -121,7 +134,7 @@ export const pageQuery = graphql`
     posts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { template: { eq: "blog-post" } } }
-      limit: 9
+      limit: 5
     ) {
       edges {
         node {
@@ -163,25 +176,31 @@ const HomePage = ({ data }) => {
     ? frontmatter.underlayImage.childImageSharp.gatsbyImageData
     : ""
 
-    // const { iconimage } = useSiteMetadata()
+    const { iconimage } = useSiteMetadata()
 
     const { companyname } = useSiteMetadata()
     const { siteUrl } = useSiteMetadata()
+
 
     const YouTubeStart = frontmatter.youtubestart
     const YouTubeEnd = frontmatter.youtubeend
     const YouTubeMute = frontmatter.youtubemute
     const YouTubeControls = frontmatter.youtubecontrols
     const YouTubeAutostart = frontmatter.youtubeautostart
+    // const SkillsTitle = frontmatter.skillsTitle
+    const SkillsText = frontmatter.skillsText
+    
+    // const { showNav } = useSiteMetadata()
+    const { showInfo } = useSiteMetadata()
+    const { showFeature } = useSiteMetadata()
+    const { showPosts } = useSiteMetadata()
+    const { showResume } = useSiteMetadata()
+    const { showSocial } = useSiteMetadata()
+    const { showSkills } = useSiteMetadata()
+    const { showCover } = useSiteMetadata()
+    const { showfooter } = useSiteMetadata()
 
-    const ShowFeature = frontmatter.showFeature
-    const ShowInfo = frontmatter.showInfo
-    const ShowPosts = frontmatter.showPosts
-    const ShowResume = frontmatter.showResume
-    const showSocial = frontmatter.showSocial
-    const showSkills = frontmatter.showSkills
-    const ShowCover = frontmatter.showCover
-    const showfooter = useSiteMetadata()
+
     // const showCTA = frontmatter.cta.ctaText
     const CtaLink = frontmatter.cta.ctaLink
     // const coverLink = frontmatter.coverletter.coverLink
@@ -220,6 +239,8 @@ function AddSvg(){
 
 
 
+
+
 const YouTube = frontmatter.youtuber
 
   if (!YouTube) {
@@ -230,7 +251,7 @@ const YouTube = frontmatter.youtuber
     <Iframer />
   }
 
-  function Iframer() {
+function Iframer() {
     
 
     const Url = "https://www.youtube.com/embed/" + frontmatter.youtuber + "?controls=" + frontmatter.youtubecontrols + "&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;start=" + frontmatter.youtubestart + "&amp;end=" + frontmatter.youtubeend + "&amp;loop=1&amp;mute=" + frontmatter.youtubemute + "&amp;playsinline=1&amp;playlist=" + frontmatter.youtuber + ""
@@ -243,21 +264,125 @@ const YouTube = frontmatter.youtuber
   style={{zIndex:'3'}}
       config={{
         youtube: {
-          playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute  }
+          playerVars: { showinfo:0, autoplay:YouTubeAutostart, controls:YouTubeControls, start:YouTubeStart, end:YouTubeEnd, mute:YouTubeMute, loop:true  }
         },
       }}
-      loop
-   
+      playing
       playsinline
-      />
+      playIcon={
+        <button aria-label="Click To Play" className="clickplay" style={{position:'absolute', zIndex:'5', top:'0', border:'0px solid red', width:'100vw', height:'100%', background:'', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column',  paddingTop:'100px'}}>
+
+
+
+    <div className="" style={{ textAlign:'center', animation:'fadeIn 3s', width:'80vw', margin:'5vh auto'}}>
+    
+    <div style={{position:'relative', maxWidth:'100vw', margin:'0', zIndex:'0', display:'flex', justifyContent:'center', background:'transparent !important',}}>
+
+
+
+    {iconimage ? (
+        
+        <img className="homepage-bg" src={iconimage} width="500px" height="150px" alt="VidSock" style={{ width:'100%', maxWidth:'40vw', filter:'drop-shadow(2px 2px 2px #000)', background:'transparent !important',}} />
+                  ) : (
+                    ""
+                  )}
+
+
+
+</div>
+
+
+<div style={{display:'flex', flexDirection:'', height:'', margin:'0 auto 0 auto', width:'100%', border:'0px solid yellow'}}>
+                <div style={{  fontWeight:'bold', padding:'0', margin:'0 auto', fontSize:'clamp(1rem, 2vw, 3.4rem)',  borderRadius:'12px', border:'0px solid #333', filter:'drop-shadow(2px 2px 2px #000)', }}><ImPlay style={{margin:'0 auto', width:'100px', fontSize:'50px'}} />Play</div>
+                
+            </div>
+
+
+      </div>
+      </button>}
+        light="../assets/transparent.png"
+    />
     )
   }
 
   
 
 
+  const YouTube2 = frontmatter.youtuber2
+  const AudioStart = frontmatter.audiostart
+  const AudioEnd = frontmatter.audioend
+  const AudioTitle = frontmatter.audiotitle
+
+  function Iframer3() {
+    const iframeUrl3 = "https://www.youtube.com/embed/" + frontmatter.youtuber2
+    return (
+<div style={{marginTop:'10px', position:'relative', zIndex:'4',
+display:'flex', justifyContent:'center', maxHeight:'80px !important', height:'100px', border:'0px solid yellow', width:'100%'
+}}>
+<ReactPlayer
+          className='react-player67'
+          url={iframeUrl3}
+          // url={[
+          //   iframeUrl,
+          //   Suggestion1,
+          //   Suggestion2,
+          //   Suggestion3
+          // ]}
+          width="250px"
+          height="100%"
+          style={{
+            border:'0px solid red'
+        }}
+          config={{
+            youtube: {
+              playerVars: { showinfo:0, autoplay:1, controls:0, start:AudioStart, end:AudioEnd, mute:0,  }
+            },
+          }}
+          loop
+          playing
+          playsinline
+          playIcon={
+            <button aria-label="Click To Play" className="clickplays" style={{position:'relative', zIndex:'0', top:'', border:'0px  solid red', width:'100vw', height:'', background:'transparent', color:'#fff', fontSize:'18px', textAlign:'center', display:'flex', flexDirection:'column', verticalAlign:'center', justifyContent:'center', alignItems:'center', paddingTop:'0', borderRadius:'12px'}}>
+          
+        <div className="" style={{position:'absolute', top:'-40px', zIndex:'0', textAlign:'center', animation:'fadeIn 3s', display:'flex', justifyContent:'center', width:'auto', marginBottom:''}}>
+          
+    
+
+          <div className="popped" style={{display:'flex', minWidth:'200px', margin:'0 auto', fontWeight:'bold', padding:'.2rem .4rem', fontSize:'2rem', background:'rgba(0,0,0,0.30)', borderRadius:'12px', border:'1px solid #333', filter:'drop-shadow(2px 2px 2px #000)',}}>
+            
+            <div style={{fontSize:'.8rem', fontWeight:'', padding:'0 0 0 .3rem', filter:'drop-shadow(2px 2px 2px #000)', textAlign:'center'}}>
+            I'm listening now to:<br />
+
+
+
+            <div style={{fontSize:'1rem', fontWeight:'bold', marginTop:'5px' }}>{ AudioTitle }</div>
+      
+            <div style={{display:'flex', justifyContent:'center', marginTop:'5px'}}>
+            <div><AiOutlineAudioMuted style={{margin:'0 auto', fontSize:'20px', filter:'drop-shadow(2px 2px 2px #000),', color:'#06f21a'}} /></div> &nbsp; <div>Click to listen </div>
+            
+            </div>
+            </div>
+
+          </div>
+         
+          </div>
+          </button>}
+   
+            light="../assets/transparent.png"
+          />
+     </div>
+
+
+
+
+    )
+  }
+
+
   
   return (
+
+    // TOP OF HOME
     <CustomBox style={{}}>
     <Layout>
     <Helmet>
@@ -272,27 +397,28 @@ const YouTube = frontmatter.youtuber
    image={ siteUrl + getSrc(frontmatter.featuredImage) }
       />
 
-      
 
+<div name="container21" className="container21" style={{
+ 	// overflowY: 'auto',
+  //  overflowX: 'hidden',
+  //  overscrollBehavior: 'contain',
+  //  scrollSnapAlign: 'center',
+  //  scrollPadding: '0 5%',
+  //  scrollSnapType: 'y mandatory',
 
-
-
-      
-
-        
-
-
-
-<div name="container21" className="container21" style={{height:'',}}>
+}}>
 {/* { sitecolor } */}
+
+
+
 {/* show feature */}
-        {ShowFeature ? (
-          
-<section id="feature" name="feature" style={{ display:'',}}>
+  {showFeature ? (   
+<section id="feature" order="1" name="feature" className="print no-app" style={{ display:'', margin:''}}>
   <article>
 
 
-  <div className='stack-layout' style={{ display:'', position:'relative', top:'0', zIndex:'0', height:'', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
+
+  <div className='stack-layout' style={{ display:'', position:'relative', top:'0', zIndex:'0', height:'100vh', overflow:'hidden', filter: 'drop-shadow(0 0 20px #000)' }}>
 
     
 
@@ -337,15 +463,17 @@ const YouTube = frontmatter.youtuber
       </div>
   </article>
 </section>
-
 ) : (
   ""
 )}
 {/* end show feature */}
 
+{/* show Info */}
+{showInfo ? (
+<section id="info" order="2" name="info" style={{ display:'',  minHeight:'100vh', position:'', zIndex:'2', overflow:'', margin:'0', border:'0px solid red'}}>
+  <article style={{ margin:'0 0 0 0'}}>
 
-
-<div className="no-app" style={{maxHeight:'100vh', height:'100vh', overflow:'hidden',position:'absolute', top:'', zIndex:'-1',}}>
+  <div className="no-app" style={{maxHeight:'100vh', height:'100vh', overflow:'hidden',position:'absolute', top:'', zIndex:'-1',}}>
 {UnderlayImage ? (
             <GatsbyImage
             image={UnderlayImage}
@@ -359,16 +487,6 @@ const YouTube = frontmatter.youtuber
             ""
           )}
 </div>
-
-
-
- {/* show Info */}
- {ShowInfo ? (
-
-<section id="info" name="info" style={{ display:'', minHeight:'', height:'', position:'', zIndex:'2', overflow:'', border:'0px solid red'}}>
-  <article style={{ margin:'0 0 10vh 0'}}>
-
-
 
 
 
@@ -392,7 +510,7 @@ const YouTube = frontmatter.youtuber
 {UnderlayImage ? (
   // custom image in effect //
 
-  <div className="flexcheek mob print nameblock" style={{marginTop:'', padding:'3rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.4vw, 3.2rem)', textShadow:'0 2px 3px #000', color:'#fff', 
+  <div className="flexcheek mob print nameblock" style={{marginTop:'', padding:'1rem 2rem 0 2rem', maxHeight:'', fontSize:'clamp(1rem, 1.4vw, 3.2rem)', textShadow:'0 2px 3px #000', color:'#fff', 
   background:'rgba(0,0,0,0.50)', 
   backdropFilter:'blur(12px)',
   borderRadius:'10px'}}>
@@ -444,7 +562,7 @@ const YouTube = frontmatter.youtuber
               image={SecondaryImage}
               alt={frontmatter.title + " - Featured image"}
               className="drop-shadow avatar-frame"
-              style={{ maxWidth:'', height:'', maxHeight:'35vh', position:'relative',  top:'', objectFit:'contain', backgroundSize:'contain', zIndex:''}}
+              style={{ maxWidth:'', height:'', maxHeight:'30vh', position:'relative',  top:'', objectFit:'contain', backgroundSize:'contain', zIndex:''}}
             />
           ) : (
             ""
@@ -465,7 +583,7 @@ const YouTube = frontmatter.youtuber
   <div className="nameblock" style={{margin:'20px auto 0 auto', padding:'0 0 10px 0',alignContent:'center', display:'grid', textAlign:'center', justifyContent:'center', verticalAlign:'center',
   color:'#fff',
   border:'0px solid red', 
-  maxWidth:'80%', paddingTop:'1rem', 
+  maxWidth:'80%', paddingTop:'', 
   fontSize:'clamp(1rem, 1.4vw, 3.2rem)',
   background:'rgba(0,0,0,0.50)',
   backdropFilter:'blur(8px)',
@@ -478,20 +596,29 @@ const YouTube = frontmatter.youtuber
 <br />
 {frontmatter.addressText2}
 <br />
-<Link state={{modal: true}} to="/contact/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', maxWidth:'600px', paddingLeft:'3rem', paddingRight:'3rem' }}>Contact Me</Link>
+<Link state={{modal: true}} to="/contact#info" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center' }}>Contact Me</Link>
 
 {showSocial ? (
            <Social />
           ) : (
             ""
           )}
-<br />
-{ShowCover ? (
-  <Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>View cover letter</Link>
+
+{showCover ? (
+  <Link state={{modal: true}} to="/cover/#info" className="print" style={{color:'', fontSize:'', margin:'5px auto 0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>View cover letter</Link>
 ) : (
   ""
 )}
-<br />
+
+{ !YouTube2 ? (
+            ""
+       
+          ) : (
+            
+            <Iframer3 />
+            
+          )}
+          <br />
 </div> // end nameblock
 
 
@@ -524,7 +651,7 @@ const YouTube = frontmatter.youtuber
     }}>{frontmatter.cta.ctaText}
 </a>
           ) : (
-            <Link state={{modal: true}} to="/contact/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', borderRadius:'8px', maxWidth:'600px', padding:'1rem'}}>{frontmatter.cta.ctaText}</Link>
+            <Link state={{modal: true}} to="/contact#info" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'0 auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center'}}>{frontmatter.cta.ctaText}</Link>
           )}
 
 
@@ -534,17 +661,12 @@ const YouTube = frontmatter.youtuber
           ) : (
             ""
           )}
-<br />
 
-{/* {ShowCover ? (
-""
-) : (
-  ""
-)} */}
 
-{ShowCover? (
 
-<Link state={{modal: true}} to="/cover/" className="print" style={{color:'', fontSize:'', margin:'0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</Link>
+{showCover? (
+
+<Link state={{modal: true}} to="/cover#info" className="print" style={{color:'', fontSize:'', margin:'5px auto 0 auto', textAlign:'center', textDecoration:'underline', maxWidth:'600px', padding:'0 2rem'}}>{frontmatter.coverletter.coverText}</Link>
 
 ) : (
   
@@ -552,6 +674,16 @@ const YouTube = frontmatter.youtuber
 
 )}
 
+
+{ !YouTube2 ? (
+            ""
+       
+          ) : (
+            
+            <Iframer3 />
+            
+          )}
+<br />
 </div> // end nameblock
 
       // custom image in effect //
@@ -566,43 +698,19 @@ const YouTube = frontmatter.youtuber
 {/* <div style={{height:'100px', border:'1px solid red'}}>&nbsp;</div> */}
 </article>
 </section>
-
 ) : (
   ""
 )}
 {/* end show Info */}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {/* end show Posts */}
-{ShowPosts ? (
-
-<div id="posts" name="posts" style={{margin:'20vh 0', background:'inherit'}}>
-
-
-<div className="sliderholder" style={{display:'flex', justifyContent:'center', width:'100%', height:'60vh', overflow:'hidden', position:'relative',}}>
-
-<div className="RArrow"><span></span></div>
+{showPosts ? (
+<section id="posts" order="" name="posts" style={{margin:'0 0 0 0', background:'inherit', minHeight:'100vh', overflow:'', border:'0px solid yellow', display:'flex', verticalAlign:'center'}}>
 
 
-
-<div className="horizontal-scroll-wrapper squares" style={{margin:'0 auto 0 auto', width:'calc(60vw + 1px)', transform: 'rotate(-90deg) translateY(-60vw)', padding:'20px'}}>
-
-
-
-<div className="introspacer" style={{}}></div>
+<div className="horizontal-holder allin60panel" style={{position:'relative', maxHeight:'600px', margin:'5vh 0', border:'0px solid red'}}>
+ <div className="horizontal-scroll panels sitegrad movingBG" style={{ scrollSnapType: '', maxHeight:'',}}>
+ <div className="" style={{height:'50%', paddingTop:'50%'}}></div>
 
 {openQuote ? (
             
@@ -614,10 +722,15 @@ const YouTube = frontmatter.youtuber
             ""
           )}
 
+<div className="introspacer" style={{border:'0px solid', width:''}}></div>
+
 
 
         <BlogListHome data={posts} />
-        
+
+        <div style={{justifyContent:'center', alignContent:'center', margin:'20vh auto', textAlign:'center', borderRadius:'8px', minHeight:'100vh', maxWidth:'1000px', padding:'1rem', display:'grid', placeContent:'center'}}>
+          <Link className=" " to="/posts/2" style={{textDecoration:'none', color:'inherit', textAlign:'center', height:'', display:'', placeContent:'', border:'1px solid red',}}>View More </Link>
+        </div>
 
 {closeQuote ? (
 
@@ -629,188 +742,128 @@ const YouTube = frontmatter.youtuber
             ""
           )}
 
+
    </div>
 
   </div>
-</div>
-
+</section>
    ) : (
     ""
   )}
 {/* end show Posts */}
 
+{/*  show Resume */}
+{showResume ? (
+<section id="resume" order="" style={{ display:'', minHeight:'100vh', overflow:'', margin:'60px 0 0 0', position:'relative', border:'0px solid blue'}}>
 
 
-
-
-
-
-
-
-{/* <StaticImage src="../../static/assets/yourphoto.jpg" alt="your alt text" style={{height:'auto', width:'100vw', maxHeight:'100%', position:'', left:'0', top:'', zIndex:'', margin:'2vh 0', objectFit:'contain', overflow:'hidden', border:'0px solid red !important'}}  /> */}
-
-
-
-
-
-
-
-
-{showSkills ? (
-           <Link state={{modal: true}} to="/skills/" className="button print no-app" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', border:'0px solid', margin:'2rem auto', textAlign:'center', borderRadius:'8px', maxWidth:'300px', padding:'1rem', display:'grid', placeContent:'center'}}>View Skills &amp; Capabilities</Link>
-       
-          ) : (
-            ""
-          )}
-
-
-
-
-
-{/* end show Resume */}
-{ShowResume ? (
-
- 
-
-
-<section  style={{ display:'', height:'', overflow:'', margin:'10vh 0 0 0', position:'relative'}}>
-
-
+<div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px solid #777', borderBottom:'1px solid #777', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', padding:'5px 0 5px 0', }}>
+<div className="keyboard" order="" style={{display:'flex', justifyContent:'', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> &nbsp;OR&nbsp; <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
+{/* <div order="" className="themer" style={{display:'flex', justifyContent:'center', border:'0px solid red', minWidth:'400px', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important',}} /></span></div> */}
+  <div order="" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'auto !important', margin:'0 auto'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'30px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
+  </div>
 
 <article className="hasapp"  style={{ display:'', height:'', overflow:'', padding:'1.6rem', margin:'0', position:'relative', fontSize:'clamp(1rem, 1.4vw, 3.2rem)'}}>
 
-<div id="resumename" style={{display:'none', position:'absolute', top:'-4rem', fontSize:'160%', padding:'0 0 2rem 4rem', textAlign:'left', width:'100%',}}>{companyname}<br />
-{/* {frontmatter.address.addressText}
+<div id="resumename" style={{display:'none', position:'relative', top:'', fontSize:'160%', padding:'0 0 2rem 0', textAlign:'left', width:'100%',}}>{companyname}<br />
+{frontmatter.addressText}
 <br />
-{frontmatter.address2.addressText2} */}
+{frontmatter.addressText2}
 </div>
 
 <div id="resume" className="">
 
 <span
-          style={{}}
+          style={{  columnCount:'2',
+            columnGap:'20px',
+            columnWidth:'100%'}}
             className=""
             dangerouslySetInnerHTML={{ __html: html }}
           />
           
 </div>
 
-  
+<div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px solid #777', borderBottom:'1px solid #777', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', padding:'5px 0 5px 0', }}>
+<div className="keyboard" order="" style={{display:'flex', justifyContent:'', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> &nbsp;OR&nbsp; <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
+{/* <div order="" className="themer" style={{display:'flex', justifyContent:'center', border:'0px solid red', minWidth:'400px', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important',}} /></span></div> */}
+  <div order="" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'auto !important', margin:'0 auto'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'30px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
+  </div>
 
 </article>
 
 
 
- <div className="toolbar noapp print" style={{display:'flex', flexDirection:'', gap:'', width:'', borderTop:'1px solid #777', borderBottom:'1px solid #777', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', padding:'5px 0 5px 0', }}>
-<div className="keyboard" order="1" style={{display:'flex', justifyContent:'', border:'0px solid red', width:'', margin:'0 auto', padding:'4px 0 0 0',}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Print:</span> &nbsp;<kbd>⌘</kbd> + <kbd>p</kbd> OR <kbd>Ctrl</kbd> + <kbd>p</kbd></div>
-{/* <div order="2" className="themer" style={{display:'flex', justifyContent:'center', border:'0px solid red', minWidth:'400px', margin:'0 auto', verticalAlign:'center'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}><Theme  style={{color:'inherit !important',}} /></span></div> */}
-  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'auto !important', margin:'0 auto'}}><span style={{fontWeight:'bold', fontSize:'1.3rem'}}>Install:</span> &nbsp;<IoShareOutline style={{fontSize:'30px',}} />&nbsp;+&nbsp; 'Add to Home Screen'</div>
-  </div>
+
 
 </section>
-
-
 ) : (
   ""
 )}
 {/* end show Resume */}
 
+{/*  show Skills */}
+{showSkills ? (
+  <section className="no-app print" id="skills" order="" style={{ width:'100%', overflow:'hidden', position:'relative',  justifyContent:'center', alignContent:'center', margin:'5vh auto', textAlign:'center', borderRadius:'8px', minHeight:'100vh', maxWidth:'', padding:'1rem', display:'grid', placeContent:'center', border:'0px solid green', }}>
 
 
+
+
+
+<div className="flexbutt" style={{display:'flex', marginLeft:'-15vw', columnGap:'100px', }}>
+<dl className="flexcheek" style={{border:'0px solid',}}>
+
+<dt style={{border:'0px solid red'}}>
+<h2 style={{}}>{frontmatter.skillsTitle}</h2><div>100%</div>
+</dt>
+
+      <div
+          style={{paddingBottom:'2rem', border:'0px solid yellow'}}
+            className="description"
+            dangerouslySetInnerHTML={{ __html: SkillsText }}
+          />
+
+      </dl>
+
+<dl className="flexcheek" style={{border:'0px solid',marginLeft:''}}>
+
+<dt style={{border:'0px solid red'}}>
+<h2 style={{}}>{frontmatter.skillsTitle}</h2><div>100%</div>
+</dt>
+
+      <div
+          style={{paddingBottom:'2rem', border:'0px solid yellow'}}
+            className="description"
+            dangerouslySetInnerHTML={{ __html: SkillsText }}
+          />
+
+      </dl>
+
+</div>
+
+
+
+  </section>
+          ) : (
+            ""
+          )}
+{/* end show Skills */}
 
 
  </div>{/* end scooch */}
 
 
-
- 
-
-
-  
-  
-
-
-
-<div id="installedbar" className="toolbar print hasapp" style={{position:'relative', bottom:'', width:'100vw', display:'none', flexDirection:'', gap:'', borderTop:'0px solid #555', justifyContent:'', background:'rgba(24, 29, 31, 0.2)', borderRadius:'', marginTop:'', padding:'2rem 0 3rem 0', zIndex:'', }}>
-
-
-<div className="" order="1" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
- <Link state={{modal: true}} to="/login/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Admin</Link>
- </div>
-
-
- <div className="" order="5" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
- <Link state={{modal: true}} to="/notes/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Notes</Link>
- </div>
-
-
-
- {ShowPosts ? (
-  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-<Link state={{modal: true}} to="/posts/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Portfolio</Link>
-</div>
-) : (
-  ""
-)}
-
-
-{/* {ShowResume ? (
-  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-<Link state={{modal: true}} to="/resume/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Resume</Link>
-</div>
-) : (
-  ""
-)} */}
-
-{ShowCover ? (
-  <div order="2" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-<Link state={{modal: true}} to="/cover/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Cover Letter</Link>
-</div>
-) : (
-  ""
-)}
-
-
-
-
-
-
-{showSkills ? (
-  <div order="3" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
-<Link state={{modal: true}} to="/skills/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'', justifyContent:'center',fontWeight:'bold', }}>Skills</Link>
-</div>
-) : (
-  ""
-)}
-
-
-
-{/* <div order="7" style={{display:'flex', justifyContent:'center', border:'0px solid red', width:'', margin:'0 auto'}}>
- <Link state={{modal: true}} to="/tips/" className="button print" style={{color:'#fff', fontSize:'clamp(1.2rem, 1.5vw, 3.4rem)', width:'200px', justifyContent:'center',fontWeight:'bold', }}>Tips</Link>
- </div> */}
-
-</div>
-
-
-
-<div className="usability" style={{position:'relative', zIndex:'2', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'0 auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'0px solid blue', textAlign:'center'}}>
+<div id="bottom" className="usability" style={{position:'relative', zIndex:'', bottom:'0', display:'flex', placeSelf:'center', placeContent:'center', width:'100%', margin:'0 auto', alignContent:'center', alignItems:'center', justifyContent:'center', border:'0px solid blue', textAlign:'center'}}>
 <Theme />
 </div>
 
 
 {/* show footer */}
 {showfooter ? (
-
-
 <Footer />
-
-
 ) : (
   ""
 )}
 {/* end show footer */}
-
-
 
     </Layout>
     </CustomBox>
